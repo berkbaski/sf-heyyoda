@@ -6,8 +6,10 @@ import PageTitleLayout from "components/PageTitleLayout";
 import componentContextPatch from "@smartface/contx/lib/smartface/componentContextPatch";
 import Color from "sf-core/ui/color";
 import System from "sf-core/device/system";
+import { People } from 'services/types/people';
 
 export default class Page2 extends Page2Design {
+    people: People;
     constructor() {
         super();
         // Overrides super.onShow method
@@ -27,7 +29,9 @@ export default class Page2 extends Page2Design {
 function onShow(superOnShow: () => void) {
     superOnShow();
     this.headerBar.titleLayout.applyLayout();
-    this.routeData && console.info(this.routeData.message);
+    if (this.routeData) {
+        this.people = this.routeData.people;
+    }
 }
 
 /**

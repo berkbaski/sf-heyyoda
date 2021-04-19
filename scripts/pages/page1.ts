@@ -2,17 +2,42 @@ import Page1Design from 'generated/pages/page1';
 import componentContextPatch from "@smartface/contx/lib/smartface/componentContextPatch";
 import PageTitleLayout from "components/PageTitleLayout";
 import System from "sf-core/device/system";
-import Label = require('sf-core/ui/label');
-import peopleService from '../services/people'
+import Simple_listviewitem from '../components/Simple_listviewitem'
+import * as peopleService from '../services/people'
+import { PeopleGetAll, People } from 'services/types/people';
 
 export default class Page1 extends Page1Design {
     router: any;
+    peopleList: People[];
     constructor() {
         super();
         // Overrides super.onShow method
         this.onShow = onShow.bind(this, this.onShow.bind(this));
         // Overrides super.onLoad method
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
+    }
+    async fetchPeople() {
+        try {
+            this.peopleList = await peopleService.getAll()
+            this.refreshListView();
+        } catch (error) {
+            console.log('fetchPeopleError', error)
+        }
+    }
+    initListView() {
+        Simple_listviewitem
+        this.listView1.rowHeight = Simple_listviewitem.getHeight();
+        this.listView1.onRowBind = (listViewItem: Simple_listviewitem, index: number) => {
+            listViewItem.titleText = this.peopleList[index].name; // Recommended way
+        };
+        this.listView1.onRowSelected = (item: Simple_listviewitem, index: number) => {
+            this.router.push("/pages/page2", { people: this.peopleList[index] });
+        }
+        this.listView1.refreshEnabled = false;
+    }
+    refreshListView() {
+        this.listView1.itemCount = this.peopleList.length;
+        this.listView1.refreshData();
     }
 }
 
@@ -22,7 +47,6 @@ export default class Page1 extends Page1Design {
  */
 function onShow(superOnShow: () => void) {
     superOnShow();
-    this.headerBar.titleLayout.applyLayout();
 }
 
 /**
@@ -31,20 +55,6 @@ function onShow(superOnShow: () => void) {
  */
 function onLoad(superOnLoad: () => void) {
     superOnLoad();
-    console.info('Onload page1');
-    this.headerBar.leftItemEnabled = false;
-    this.headerBar.titleLayout = new PageTitleLayout();
-    componentContextPatch(this.headerBar.titleLayout, "titleLayout");
-    if (System.OS === "Android") {
-        this.headerBar.title = "";
-    }
-    fetchPeople();
-}
-
-function fetchPeople() {
-    peopleService.getAll().then((res) => {
-        console.log('res', res.results);
-    }).catch(err => {
-        console.log(err);
-    })
+    this.initListView();
+    this.fetchPeople();
 }

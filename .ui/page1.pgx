@@ -8,8 +8,7 @@
 				"children": [
 					"42b807d1",
 					"b7d28cff",
-					"980522a9",
-					"9e49-7873-afba-472b"
+					"82bb-fa91-d4ee-89b1"
 				],
 				"isRemovable": true,
 				"name": "page1",
@@ -29,8 +28,7 @@
 				"paddingRight": 16,
 				"safeAreaEnabled": true
 			},
-			"version": "6.15.1",
-			"degree": 0
+			"version": "6.15.1"
 		},
 		{
 			"className": ".sf-statusBar",
@@ -44,8 +42,7 @@
 			"type": "StatusBar",
 			"userProps": {
 				"visible": true
-			},
-			"degree": 1
+			}
 		},
 		{
 			"className": ".sf-headerBar",
@@ -55,77 +52,62 @@
 				"isRemovable": false,
 				"name": "headerBar",
 				"parent": "e891b86d",
-				"title": "Page1"
+				"title": "Star Wars Characters"
 			},
 			"type": "HeaderBar",
 			"userProps": {
-				"title": "Page1",
+				"title": "Star Wars Characters",
 				"visible": true
-			},
-			"degree": 1
+			}
 		},
 		{
-			"className": ".sf-label",
-			"id": "980522a9",
+			"className": ".sf-listView",
+			"id": "82bb-fa91-d4ee-89b1",
 			"props": {
-				"autoHeight": 39.325842696629216,
-				"children": [],
-				"name": "lbl",
+				"children": [
+					"6169-1b05-b114-4486"
+				],
+				"name": "listView1",
 				"parent": "e891b86d",
-				"text": "Page1",
 				"usePageVariable": true
 			},
-			"type": "Label",
+			"type": "ListView",
 			"userProps": {
-				"autoHeight": 39.325842696629216,
-				"backgroundColor": "rgba( 255, 255, 255, 0 )",
 				"flexProps": {
-					"marginLeft": 20,
-					"marginRight": 20,
-					"alignSelf": "STRETCH",
 					"flexGrow": 1
 				},
-				"font": {
-					"size": 32,
-					"bold": false,
-					"italic": false,
-					"family": "SFProText",
-					"style": "Regular"
-				},
-				"height": 600,
-				"multiline": true,
-				"text": "Page1",
-				"textAlignment": "MIDCENTER",
-				"textColor": "rgba( 210, 210, 210, 1 )",
-				"usePageVariable": true,
-				"testId": "L-42gAben"
-			},
-			"degree": 1
+				"height": null,
+				"testId": "iTcASvUaQ",
+				"usePageVariable": true
+			}
 		},
 		{
-			"className": ".sf-button",
-			"id": "9e49-7873-afba-472b",
+			"className": ".sf-listViewItem .sf-listViewItem-simple",
+			"hiddenComponent": false,
+			"id": "6169-1b05-b114-4486",
+			"initialized": true,
 			"props": {
-				"autoHeight": 50.561797752808985,
 				"children": [],
-				"name": "btnNext",
-				"parent": "e891b86d",
-				"text": "Next Page",
-				"usePageVariable": true
+				"name": "simple_listviewitem",
+				"parent": "82bb-fa91-d4ee-89b1"
 			},
-			"type": "Button",
+			"source": {
+				"page": "__library__",
+				"type": "simple_listviewitem",
+				"id": "1841-ff9a-b968-028d"
+			},
+			"type": "ListViewItem",
 			"userProps": {
-				"autoHeight": 50.561797752808985,
+				"flex": {
+					"positionType": 0
+				},
 				"flexProps": {
-					"alignSelf": "AUTO",
 					"positionType": "RELATIVE"
 				},
-				"text": "Next Page",
-				"usePageVariable": true,
-				"width": null,
-				"testId": "ucEDBF6ZMB"
-			},
-			"degree": 1
+				"left": 0,
+				"testId": "OC8ID_RAA",
+				"top": 0
+			}
 		}
 	]
 }
