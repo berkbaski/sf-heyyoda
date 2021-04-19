@@ -1,0 +1,104 @@
+{
+	"components": [
+		{
+			"className": ".sf-listViewItem .sf-listViewItem-simple",
+			"hiddenComponent": false,
+			"id": "1292-154f-f8eb-c1df",
+			"initialized": true,
+			"props": {
+				"children": [
+					"1d6b-30be-9567-2699",
+					"35cf-6e97-9de9-28e2",
+					"6916-eaed-3818-5db8"
+				],
+				"name": "simple_listviewitem_1",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ListViewItem",
+			"userProps": {
+				"flexProps": {},
+				"left": 10,
+				"top": 371.9047619047619
+			}
+		},
+		{
+			"className": ".sf-label .sf-listViewItem-simple-title",
+			"id": "1d6b-30be-9567-2699",
+			"props": {
+				"autoHeight": 51.086956521739125,
+				"autoWidth": 134.91847826086956,
+				"children": [],
+				"name": "lblKey",
+				"parent": "1292-154f-f8eb-c1df",
+				"text": "ListView Cell Title",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 51.086956521739125,
+				"autoWidth": 134.91847826086956,
+				"flexProps": {
+					"flexGrow": 1
+				},
+				"font": {
+					"size": 16,
+					"bold": true,
+					"italic": false,
+					"family": "SFProText",
+					"style": "Semibold"
+				},
+				"marginLeft": 16,
+				"text": "ListView Cell Title",
+				"textColor": "rgba( 74, 144, 226, 1 )",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label .sf-listViewItem-simple-title",
+			"id": "35cf-6e97-9de9-28e2",
+			"props": {
+				"autoHeight": 51.086956521739125,
+				"autoWidth": 134.91847826086956,
+				"children": [],
+				"name": "lblValue",
+				"parent": "1292-154f-f8eb-c1df",
+				"text": "ListView Cell Title",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 51.086956521739125,
+				"autoWidth": 134.91847826086956,
+				"flexProps": {
+					"flexGrow": 1
+				},
+				"marginLeft": 16,
+				"text": "ListView Cell Title",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout .sf-listViewItem-simple-line",
+			"id": "6916-eaed-3818-5db8",
+			"props": {
+				"children": [],
+				"name": "flLine",
+				"parent": "1292-154f-f8eb-c1df"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		}
+	]
+}

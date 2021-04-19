@@ -3,6 +3,7 @@ import HeaderBarItem from "sf-core/ui/headerbaritem";
 import touch from "sf-extension-utils/lib/touch";
 import Image from "sf-core/ui/image";
 import PageTitleLayout from "components/PageTitleLayout";
+import Simple_listviewitem_1 from '../components/Simple_listviewitem_1';
 import componentContextPatch from "@smartface/contx/lib/smartface/componentContextPatch";
 import Color from "sf-core/ui/color";
 import System from "sf-core/device/system";
@@ -18,11 +19,20 @@ export default class Page2 extends Page2Design {
         // Overrides super.onLoad method
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
     }
-    initLabels() {
-        console.log('details', this.details);
-    }
     initHeader() {
         this.headerBar.title = this.peopleName;
+    }
+    initListView() {
+        this.listView2.rowHeight = Simple_listviewitem_1.getHeight();
+        this.listView2.onRowBind = (listViewItem: Simple_listviewitem_1, index: number) => {
+            listViewItem.keyText = this.details[index][0]
+            listViewItem.valueText = this.details[index][1]
+        };
+        this.listView2.refreshEnabled = false;
+    }
+    refreshListView() {
+        this.listView2.itemCount = this.details.length;
+        this.listView2.refreshData();
     }
 }
 
@@ -36,8 +46,9 @@ function onShow(superOnShow: () => void) {
         const people: People = this.routeData.people;
         this.peopleName = people.name;
         this.details = Object.entries(people).filter((value) => ['string', 'number', 'boolean'].includes(typeof value[1]))
-        this.initLabels();
         this.initHeader();
+        this.initListView();
+        this.refreshListView();
     }
 }
 
