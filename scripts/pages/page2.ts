@@ -9,7 +9,8 @@ import System from "sf-core/device/system";
 import { People } from 'services/types/people';
 
 export default class Page2 extends Page2Design {
-    people: People;
+    details: [string, any];
+    peopleName: string;
     constructor() {
         super();
         // Overrides super.onShow method
@@ -18,11 +19,10 @@ export default class Page2 extends Page2Design {
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
     }
     initLabels() {
-        this.lblName.text = this.people.name;
-        this.lblHairColor.text = `Hair Color: ${this.people.hair_color}`;
-        this.lblSkinColor.text = `Skin Color: ${this.people.skin_color}`;
-        this.lblHeight.text = `Height: ${this.people.height}`;
-        this.lblBirthDay.text = `Birth Year: ${this.people.birth_year}`;
+        console.log('details', this.details);
+    }
+    initHeader() {
+        this.headerBar.title = this.peopleName;
     }
 }
 
@@ -32,10 +32,12 @@ export default class Page2 extends Page2Design {
  */
 function onShow(superOnShow: () => void) {
     superOnShow();
-    this.headerBar.titleLayout.applyLayout();
     if (this.routeData) {
-        this.people = this.routeData.people;
+        const people: People = this.routeData.people;
+        this.peopleName = people.name;
+        this.details = Object.entries(people).filter((value) => ['string', 'number', 'boolean'].includes(typeof value[1]))
         this.initLabels();
+        this.initHeader();
     }
 }
 
@@ -45,27 +47,5 @@ function onShow(superOnShow: () => void) {
  */
 function onLoad(superOnLoad: () => void) {
     superOnLoad();
-    let headerBar;
-    this.headerBar.titleLayout = new PageTitleLayout();
-    componentContextPatch(this.headerBar.titleLayout, "titleLayout");
-    this.headerBar.setItems([new HeaderBarItem({
-        title: "Option",
-        onPress: () => {
-            console.warn("You pressed Option item!");
-        }
-    })]);
-    if (System.OS === "Android") {
-        headerBar = this.headerBar;
-        headerBar.setLeftItem(new HeaderBarItem({
-            onPress: () => {
-                this.router.goBack();
-            },
-            image: Image.createFromFile("images://arrow_back.png")
-        }));
-    }
-    else {
-        headerBar = this.parentController.headerBar;
-    }
-    headerBar.itemColor = Color.WHITE;
 }
 
