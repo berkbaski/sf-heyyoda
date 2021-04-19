@@ -16,9 +16,13 @@ export default class Page2 extends Page2Design {
         this.onShow = onShow.bind(this, this.onShow.bind(this));
         // Overrides super.onLoad method
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
-        touch.addPressEvent(this.btnSayHello, () => {
-            alert("Hello World!");
-        });
+    }
+    initLabels() {
+        this.lblName.text = this.people.name;
+        this.lblHairColor.text = `Hair Color: ${this.people.hair_color}`;
+        this.lblSkinColor.text = `Skin Color: ${this.people.skin_color}`;
+        this.lblHeight.text = `Height: ${this.people.height}`;
+        this.lblBirthDay.text = `Birth Year: ${this.people.birth_year}`;
     }
 }
 
@@ -31,6 +35,7 @@ function onShow(superOnShow: () => void) {
     this.headerBar.titleLayout.applyLayout();
     if (this.routeData) {
         this.people = this.routeData.people;
+        this.initLabels();
     }
 }
 

@@ -3,13 +3,16 @@
 		{
 			"className": ".sf-page",
 			"id": "7761adc8",
-			"initialized": false,
+			"initialized": true,
 			"props": {
 				"children": [
 					"a829471c",
 					"35f1c1a1",
-					"ce08-3fd4-03e6-4438",
-					"9e3d-3c8c-de2c-aad8"
+					"239a-ac05-a3d0-62c4",
+					"1a2f-2ae3-1792-8b7b",
+					"970f-abc4-9c52-9919",
+					"145b-500b-394d-78ed",
+					"e484-e03c-4b7d-2389"
 				],
 				"isRemovable": true,
 				"name": "page2",
@@ -20,7 +23,7 @@
 			"type": "Page",
 			"userProps": {
 				"flexProps": {
-					"justifyContent": "SPACE_AROUND"
+					"justifyContent": "FLEX_START"
 				},
 				"orientation": "PORTRAIT",
 				"paddingBottom": 20,
@@ -28,8 +31,7 @@
 				"paddingRight": 16,
 				"safeAreaEnabled": true
 			},
-			"version": "6.15.1",
-			"degree": 0
+			"version": "6.15.1"
 		},
 		{
 			"className": ".sf-statusBar",
@@ -43,8 +45,7 @@
 			"type": "StatusBar",
 			"userProps": {
 				"visible": true
-			},
-			"degree": 1
+			}
 		},
 		{
 			"className": ".sf-headerBar",
@@ -60,76 +61,110 @@
 			"userProps": {
 				"title": "Page2",
 				"visible": true
-			},
-			"degree": 1
+			}
 		},
 		{
 			"className": ".sf-label",
-			"id": "ce08-3fd4-03e6-4438",
+			"id": "239a-ac05-a3d0-62c4",
 			"props": {
-				"autoHeight": 76.66666666666667,
 				"children": [],
-				"name": "lbl",
+				"name": "lblName",
 				"parent": "7761adc8",
-				"text": "Page2",
+				"text": "label1",
 				"usePageVariable": true
 			},
 			"type": "Label",
 			"userProps": {
-				"autoHeight": 76.66666666666667,
-				"backgroundColor": "rgba( 255, 255, 255, 0 )",
-				"flexProps": {
-					"marginLeft": 20,
-					"marginRight": 20,
-					"alignSelf": "STRETCH",
-					"flexGrow": 1
-				},
 				"font": {
-					"size": 32,
-					"bold": false,
+					"size": 25,
+					"bold": true,
 					"italic": false,
 					"family": "SFProText",
-					"style": "Regular"
+					"style": "Semibold"
 				},
-				"height": 90,
-				"left": 0,
-				"multiline": true,
-				"text": "Page2",
+				"ios": {
+					"shadowColor": "rgba( 0, 0, 0, 1 )"
+				},
+				"testId": "kc9AveXH5",
+				"text": "label1",
 				"textAlignment": "MIDCENTER",
-				"textColor": "rgba( 210, 210, 210, 1 )",
-				"top": 0,
-				"usePageVariable": true,
-				"width": null,
-				"testId": "dtgphCYa4b"
-			},
-			"degree": 1
+				"textColor": "rgba( 0, 0, 0, 1 )",
+				"usePageVariable": true
+			}
 		},
 		{
-			"className": ".sf-button",
-			"id": "9e3d-3c8c-de2c-aad8",
+			"className": ".sf-label",
+			"id": "1a2f-2ae3-1792-8b7b",
 			"props": {
-				"autoHeight": 51.11111111111111,
 				"children": [],
-				"name": "btnSayHello",
+				"name": "lblHairColor",
 				"parent": "7761adc8",
-				"text": "Say Hello",
+				"text": "label2",
 				"usePageVariable": true
 			},
-			"type": "Button",
+			"type": "Label",
 			"userProps": {
-				"autoHeight": 51.11111111111111,
-				"flexProps": {
-					"alignSelf": "AUTO",
-					"positionType": "RELATIVE"
-				},
-				"left": 0,
-				"text": "Say Hello",
-				"top": 0,
-				"usePageVariable": true,
-				"width": null,
-				"testId": "6SWaorSDtL"
+				"testId": "ACZ215BA_",
+				"text": "label2",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label",
+			"id": "970f-abc4-9c52-9919",
+			"props": {
+				"children": [],
+				"name": "lblSkinColor",
+				"parent": "7761adc8",
+				"text": "label2",
+				"usePageVariable": true
 			},
-			"degree": 1
+			"type": "Label",
+			"userProps": {
+				"left": 0,
+				"testId": "ACZ215BA_",
+				"text": "label2",
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label",
+			"id": "145b-500b-394d-78ed",
+			"props": {
+				"children": [],
+				"name": "lblHeight",
+				"parent": "7761adc8",
+				"text": "label2",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"left": 0,
+				"testId": "ACZ215BA_",
+				"text": "label2",
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label",
+			"id": "e484-e03c-4b7d-2389",
+			"props": {
+				"children": [],
+				"name": "lblBirthDay",
+				"parent": "7761adc8",
+				"text": "label2",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"left": 0,
+				"testId": "ACZ215BA_",
+				"text": "label2",
+				"top": 0,
+				"usePageVariable": true
+			}
 		}
 	]
 }
