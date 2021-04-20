@@ -8,6 +8,7 @@
 				"children": [
 					"a829471c",
 					"35f1c1a1",
+					"df0c-595e-fd97-3ac4",
 					"f40d-b6c5-42cb-3907"
 				],
 				"isRemovable": true,
@@ -57,6 +58,22 @@
 			"userProps": {
 				"title": "Page2",
 				"visible": true
+			}
+		},
+		{
+			"className": ".sf-imageView",
+			"id": "df0c-595e-fd97-3ac4",
+			"props": {
+				"children": [],
+				"name": "imageView1",
+				"parent": "7761adc8",
+				"usePageVariable": true
+			},
+			"type": "ImageView",
+			"userProps": {
+				"height": 150,
+				"testId": "BnNIoY753",
+				"usePageVariable": true
 			}
 		},
 		{

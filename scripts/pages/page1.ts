@@ -1,4 +1,6 @@
 import Page1Design from 'generated/pages/page1';
+import Image from "sf-core/ui/image";
+import ImageView from "sf-core/ui/imageview";
 
 import Simple_listviewitem from 'components/Simple_listviewitem';
 
@@ -35,6 +37,8 @@ export default class Page1 extends Page1Design {
         this.listView1.rowHeight = Simple_listviewitem.getHeight();
         this.listView1.onRowBind = (listViewItem: Simple_listviewitem, index: number) => {
             listViewItem.titleText = store.getState().people.peopleList[index].name;
+            listViewItem.image = "images://smartface.png";
+
             if (index + 1 < store.getState().people.peopleList.length) {
                 return; // Don't call service when scroll isn't at the bottom
             }

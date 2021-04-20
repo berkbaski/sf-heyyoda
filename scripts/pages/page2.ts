@@ -26,7 +26,7 @@ export default class Page2 extends Page2Design {
     }
     initListView() {
         this.listView2.rowHeight = Simple_listviewitem_1.getHeight();
-        this.listView2.onRowBind = (listViewItem: Simple_listviewitem_1, index: number) => {            
+        this.listView2.onRowBind = (listViewItem: Simple_listviewitem_1, index: number) => {
             listViewItem.keyText = this.details[index][0];
             listViewItem.valueText =
                 moment.isDate(this.details[index][1]) ?
@@ -38,6 +38,9 @@ export default class Page2 extends Page2Design {
     refreshListView() {
         this.listView2.itemCount = this.details.length;
         this.listView2.refreshData();
+    }
+    showImage() {
+        this.imageView1.image = "images://smartface.png";
     }
 }
 
@@ -51,6 +54,7 @@ function onShow(superOnShow: () => void) {
         const people: People = store.getState().people.peopleList[this.routeData.peopleIndex];
         this.peopleName = people.name;
         this.details = Object.entries(people).filter((value) => ['string', 'number', 'boolean'].includes(typeof value[1]))
+        this.showImage();
         this.initHeader();
         this.initListView();
         this.refreshListView();

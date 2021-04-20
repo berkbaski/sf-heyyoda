@@ -7,6 +7,7 @@
 			"initialized": true,
 			"props": {
 				"children": [
+					"55f5-f296-a37b-fc7f",
 					"24ca-f21f-dfb6-5dc9",
 					"8474-887d-3102-405e",
 					"bd8f-5e00-4110-7fd7"
@@ -22,6 +23,26 @@
 				"flexProps": {},
 				"left": 0,
 				"top": 361.9047619047619
+			}
+		},
+		{
+			"className": ".sf-imageView",
+			"id": "55f5-f296-a37b-fc7f",
+			"props": {
+				"children": [],
+				"name": "imageView1",
+				"parent": "1841-ff9a-b968-028d",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ImageView",
+			"userProps": {
+				"height": 50,
+				"testId": "hBJ7_WQRw",
+				"usePageVariable": true,
+				"width": 50
 			}
 		},
 		{
