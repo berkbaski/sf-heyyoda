@@ -1,7 +1,5 @@
 import Page1Design from 'generated/pages/page1';
-import Image from "sf-core/ui/image";
-import ImageView from "sf-core/ui/imageview";
-
+import BackClose from 'sf-extension-utils/lib/router/back-close'
 import Simple_listviewitem from 'components/Simple_listviewitem';
 
 import * as peopleService from 'services/people';
@@ -78,6 +76,7 @@ function onLoad(superOnLoad: () => void) {
     superOnLoad();
     this.initListView();
     this.fetchPeople();
+    BackClose.setDefaultBackStyle({ image: null, hideTitle: '' })
 }
 
 function onHide(superOnHide: () => void) {
