@@ -6,6 +6,7 @@ import PageTitleLayout from "components/PageTitleLayout";
 import Simple_listviewitem_1 from '../components/Simple_listviewitem_1';
 import componentContextPatch from "@smartface/contx/lib/smartface/componentContextPatch";
 import Color from "sf-core/ui/color";
+import AttributedString from 'sf-core/ui/attributedstring';
 import System from "sf-core/device/system";
 import { People } from 'services/types/people';
 import moment from 'moment'
@@ -14,6 +15,9 @@ import store from 'duck/store';
 export default class Page2 extends Page2Design {
     details: [string, any];
     peopleName: string;
+
+    router: any;
+
     constructor() {
         super();
         // Overrides super.onShow method
@@ -28,10 +32,21 @@ export default class Page2 extends Page2Design {
         this.listView2.rowHeight = Simple_listviewitem_1.getHeight();
         this.listView2.onRowBind = (listViewItem: Simple_listviewitem_1, index: number) => {
             listViewItem.keyText = this.details[index][0];
-            listViewItem.valueText =
-                moment.isDate(this.details[index][1]) ?
-                    moment(new Date(this.details[index][1]), 'MM.DD.YYYY') :
-                    this.details[index][1];
+            listViewItem.valueText = this.details[index][1];
+
+            const isLink = this.checkIsLink(this.details[index][1]);
+            if (isLink) {
+                const attributeString = new AttributedString();
+                attributeString.string = `Open ${this.details[index][0]} link`;
+                attributeString.link = this.details[index][1];
+                attributeString.underline = true;
+                attributeString.underlineColor = Color.BLUE;
+                attributeString.foregroundColor = Color.BLUE;
+                listViewItem.lblValue.attributedText = [attributeString];
+                listViewItem.lblValue.onLinkClick = () => {
+                    this.router.push("/pages/page3", { key: this.details[index][0], value: this.details[index][1] });
+                }
+            }
         };
         this.listView2.refreshEnabled = false;
     }
@@ -41,6 +56,15 @@ export default class Page2 extends Page2Design {
     }
     showImage() {
         this.imageView1.image = "images://smartface.png";
+    }
+    checkIsLink(value: string) {
+        const pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
+            '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+            '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+            '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+            '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+            '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
+        return !!pattern.test(value);
     }
 }
 

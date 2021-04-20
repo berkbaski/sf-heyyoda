@@ -1,4 +1,4 @@
-import sc from "./serviceConfig";
+import { sc, scEmpty } from "./serviceConfig";
 import { People, PeopleGetAll } from "./types/people";
 import store from 'duck/store';
 import PeopleActions from 'duck/people/actions';
@@ -17,6 +17,14 @@ export async function getAll(page?: number): Promise<void> {
 export async function get(id: number): Promise<People> {
     try {
         return await sc.request(`/people/${id}`, { method: "GET" });
+    } catch (error) {
+        throw error;
+    }
+}
+
+export async function execute(url: string): Promise<any> {
+    try {
+        return await scEmpty.request(url, { method: "GET" })
     } catch (error) {
         throw error;
     }

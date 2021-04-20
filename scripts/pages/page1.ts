@@ -10,7 +10,6 @@ import store from 'duck/store';
 
 export default class Page1 extends Page1Design {
     unsubsribe: ReturnType<typeof store.subscribe> = () => { };
-
     router: any;
     page = 0;
     servicePage = 0;

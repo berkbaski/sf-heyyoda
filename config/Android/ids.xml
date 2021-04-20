@@ -21,4 +21,7 @@
     <item name="_Page1_ListView1_Simple_listviewitem" type="id" />
     <item name="___library___ImageView1" type="id" />
     <item name="___library___Simple_listviewitem_ImageView1" type="id" />
+    <item name="_Page2_ImageView1" type="id" />
+    <item name="___library___Simple_listviewitem_1_Button1" type="id" />
+    <item name="___library___Simple_listviewitem_1_TextView1" type="id" />
 </resources>
