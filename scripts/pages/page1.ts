@@ -8,7 +8,8 @@ import { PeopleGetAll, People } from 'services/types/people';
 
 export default class Page1 extends Page1Design {
     router: any;
-    peopleList: People[];
+    peopleList: People[] = [];
+    page = 1;
     constructor() {
         super();
         // Overrides super.onShow method
@@ -18,7 +19,8 @@ export default class Page1 extends Page1Design {
     }
     async fetchPeople() {
         try {
-            this.peopleList = await peopleService.getAll()
+            const newPeopleList = await peopleService.getAll(this.page)
+            this.peopleList = [...this.peopleList, ...newPeopleList];
             this.refreshListView();
         } catch (error) {
             console.log('fetchPeopleError', error)
@@ -29,6 +31,10 @@ export default class Page1 extends Page1Design {
         this.listView1.rowHeight = Simple_listviewitem.getHeight();
         this.listView1.onRowBind = (listViewItem: Simple_listviewitem, index: number) => {
             listViewItem.titleText = this.peopleList[index].name; // Recommended way
+            if (index <= this.peopleList.length - 3) {
+                this.page++;
+                this.fetchPeople();
+            }
         };
         this.listView1.onRowSelected = (item: Simple_listviewitem, index: number) => {
             this.router.push("/pages/page2", { people: this.peopleList[index] });

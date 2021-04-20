@@ -8,6 +8,7 @@ import componentContextPatch from "@smartface/contx/lib/smartface/componentConte
 import Color from "sf-core/ui/color";
 import System from "sf-core/device/system";
 import { People } from 'services/types/people';
+import moment from 'moment'
 
 export default class Page2 extends Page2Design {
     details: [string, any];
@@ -24,9 +25,12 @@ export default class Page2 extends Page2Design {
     }
     initListView() {
         this.listView2.rowHeight = Simple_listviewitem_1.getHeight();
-        this.listView2.onRowBind = (listViewItem: Simple_listviewitem_1, index: number) => {
-            listViewItem.keyText = this.details[index][0]
-            listViewItem.valueText = this.details[index][1]
+        this.listView2.onRowBind = (listViewItem: Simple_listviewitem_1, index: number) => {            
+            listViewItem.keyText = this.details[index][0];
+            listViewItem.valueText =
+                moment.isDate(this.details[index][1]) ?
+                    moment(new Date(this.details[index][1]), 'MM.DD.YYYY') :
+                    this.details[index][1];
         };
         this.listView2.refreshEnabled = false;
     }

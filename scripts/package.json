@@ -7,6 +7,8 @@
         "js-base": "^1.0.5",
         "keyboardlayout": "^2.0.7",
         "materialtextbox": "^4.0.15",
+        "moment": "^2.29.1",
+        "redux": "^4.0.5",
         "sf-core": "^4.3.0",
         "sf-extension-utils": "^14.5.0",
         "source-map": "0.6.1"

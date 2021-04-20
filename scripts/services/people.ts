@@ -1,9 +1,10 @@
 import sc from "./serviceConfig";
 import { People, PeopleGetAll } from "./types/people";
 
-export async function getAll(): Promise<People[]> {
+export async function getAll(page?: number): Promise<People[]> {
     try {
-        const peopleList: PeopleGetAll = await sc.request(`/people`, { method: "GET" });
+        const pagination = page || 1;
+        const peopleList: PeopleGetAll = await sc.request(`/people?page=${pagination}`, { method: "GET" });
         return peopleList.results;
     } catch (error) {
         throw error;
