@@ -9,6 +9,7 @@ import Color from "sf-core/ui/color";
 import System from "sf-core/device/system";
 import { People } from 'services/types/people';
 import moment from 'moment'
+import store from 'duck/store';
 
 export default class Page2 extends Page2Design {
     details: [string, any];
@@ -47,7 +48,7 @@ export default class Page2 extends Page2Design {
 function onShow(superOnShow: () => void) {
     superOnShow();
     if (this.routeData) {
-        const people: People = this.routeData.people;
+        const people: People = store.getState().people.peopleList[this.routeData.peopleIndex];
         this.peopleName = people.name;
         this.details = Object.entries(people).filter((value) => ['string', 'number', 'boolean'].includes(typeof value[1]))
         this.initHeader();

@@ -1,48 +1,56 @@
 import Page1Design from 'generated/pages/page1';
-import componentContextPatch from "@smartface/contx/lib/smartface/componentContextPatch";
-import PageTitleLayout from "components/PageTitleLayout";
-import System from "sf-core/device/system";
-import Simple_listviewitem from '../components/Simple_listviewitem'
-import * as peopleService from '../services/people'
-import { PeopleGetAll, People } from 'services/types/people';
+
+import Simple_listviewitem from 'components/Simple_listviewitem';
+
+import * as peopleService from 'services/people';
+
+import store from 'duck/store';
 
 export default class Page1 extends Page1Design {
+    unsubsribe: ReturnType<typeof store.subscribe> = () => { };
+
     router: any;
-    peopleList: People[] = [];
-    page = 1;
+    page = 0;
+    servicePage = 0;
     constructor() {
         super();
         // Overrides super.onShow method
         this.onShow = onShow.bind(this, this.onShow.bind(this));
         // Overrides super.onLoad method
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
+        // Overrides super.onHide method
+        this.onHide = onHide.bind(this, this.onHide && this.onHide.bind(this));
     }
     async fetchPeople() {
         try {
-            const newPeopleList = await peopleService.getAll(this.page)
-            this.peopleList = [...this.peopleList, ...newPeopleList];
+            this.page++;
+            await peopleService.getAll(this.page);
+            this.servicePage++;
             this.refreshListView();
         } catch (error) {
             console.log('fetchPeopleError', error)
         }
     }
     initListView() {
-        Simple_listviewitem
         this.listView1.rowHeight = Simple_listviewitem.getHeight();
         this.listView1.onRowBind = (listViewItem: Simple_listviewitem, index: number) => {
-            listViewItem.titleText = this.peopleList[index].name; // Recommended way
-            if (index <= this.peopleList.length - 3) {
-                this.page++;
-                this.fetchPeople();
+            listViewItem.titleText = store.getState().people.peopleList[index].name;
+            if (index + 1 < store.getState().people.peopleList.length) {
+                return; // Don't call service when scroll isn't at the bottom
             }
+            if (this.page !== this.servicePage) {
+                return; // Prevent concurrent calls
+            }
+
+            this.fetchPeople();
         };
-        this.listView1.onRowSelected = (item: Simple_listviewitem, index: number) => {
-            this.router.push("/pages/page2", { people: this.peopleList[index] });
+        this.listView1.onRowSelected = (_item: Simple_listviewitem, index: number) => {
+            this.router.push("/pages/page2", { peopleIndex: index });
         }
         this.listView1.refreshEnabled = false;
     }
     refreshListView() {
-        this.listView1.itemCount = this.peopleList.length;
+        this.listView1.itemCount = store.getState().people.peopleList.length;
         this.listView1.refreshData();
     }
 }
@@ -53,6 +61,10 @@ export default class Page1 extends Page1Design {
  */
 function onShow(superOnShow: () => void) {
     superOnShow();
+
+    this.unsubscribe = store.subscribe(() => {
+        this.refreshListView();
+    })
 }
 
 /**
@@ -63,4 +75,9 @@ function onLoad(superOnLoad: () => void) {
     superOnLoad();
     this.initListView();
     this.fetchPeople();
+}
+
+function onHide(superOnHide: () => void) {
+    superOnHide && superOnHide();
+    this.unsubsribe();
 }

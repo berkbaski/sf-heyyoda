@@ -1,11 +1,14 @@
 import sc from "./serviceConfig";
 import { People, PeopleGetAll } from "./types/people";
+import store from 'duck/store';
+import PeopleActions from 'duck/people/actions';
 
-export async function getAll(page?: number): Promise<People[]> {
+export async function getAll(page?: number): Promise<void> {
     try {
         const pagination = page || 1;
-        const peopleList: PeopleGetAll = await sc.request(`/people?page=${pagination}`, { method: "GET" });
-        return peopleList.results;
+        const newPeopleList: PeopleGetAll = await sc.request(`/people?page=${pagination}`, { method: "GET" });
+        const peopleList = [...store.getState().people.peopleList, ...newPeopleList.results];
+        store.dispatch(PeopleActions.setPeopleList(peopleList));
     } catch (error) {
         throw error;
     }
