@@ -18,4 +18,8 @@
     <item name="_PgPeopleLinkDetail_LvProperties_LviProperty" type="id" />
     <item name="_PgPeopleList_LvPerson" type="id" />
     <item name="_PgPeopleList_LvPerson_LviPerson" type="id" />
+    <item name="_PgSettings_FlSettings" type="id" />
+    <item name="_PgSettings_FlSettings_FlTheme" type="id" />
+    <item name="_PgSettings_FlSettings_FlTheme_LblTheme" type="id" />
+    <item name="_PgSettings_FlSettings_FlTheme_SwTheme" type="id" />
 </resources>

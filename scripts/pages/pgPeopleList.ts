@@ -32,7 +32,7 @@ export default class PgPeopleList extends PgPeopleListDesign {
         this.lvPerson.rowHeight = LviPerson.getHeight();
         this.lvPerson.onRowBind = (listViewItem: LviPerson, index: number) => {
             listViewItem.name = store.getState().people.peopleList[index].name;
-            listViewItem.image = "images://smartface.png";
+            listViewItem.image = "images://darthvader.png";
 
             if (index + 1 < store.getState().people.peopleList.length) {
                 return; // Don't call service when scroll isn't at the bottom
