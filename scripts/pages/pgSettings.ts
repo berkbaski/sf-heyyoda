@@ -1,12 +1,14 @@
 import PgSettingsDesign from 'generated/pages/pgSettings';
+import HeaderBarItem from 'sf-core/ui/headerbaritem';
 
 export default class PgSettings extends PgSettingsDesign {
-	constructor() {
-		super();
-		// Overrides super.onShow method
-		this.onShow = onShow.bind(this, this.onShow.bind(this));
-		// Overrides super.onLoad method
-		this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
+    router: any;
+    constructor() {
+        super();
+        // Overrides super.onShow method
+        this.onShow = onShow.bind(this, this.onShow.bind(this));
+        // Overrides super.onLoad method
+        this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
     }
 }
 
@@ -17,7 +19,7 @@ export default class PgSettings extends PgSettingsDesign {
  * @param {Object} parameters passed from Router.go function
  */
 function onShow(superOnShow: () => void) {
-	superOnShow();
+    superOnShow();
 }
 
 /**
@@ -26,5 +28,5 @@ function onShow(superOnShow: () => void) {
  * @param {function} superOnLoad super onLoad function
  */
 function onLoad(superOnLoad: () => void) {
-	superOnLoad();
+    superOnLoad();
 }

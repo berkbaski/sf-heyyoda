@@ -56,7 +56,7 @@ export default class PgPeopleList extends PgPeopleListDesign {
         const rightItem = new HeaderBarItem({
             image: 'images://settings.png',
             onPress: () => {
-                this.router.push("/pages/pgSettings");
+                this.router.push("/pages/pgSettings/main");
             }
         });
         this.headerBar.setItems([rightItem]);
