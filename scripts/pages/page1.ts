@@ -1,6 +1,6 @@
 import Page1Design from 'generated/pages/page1';
-import BackClose from 'sf-extension-utils/lib/router/back-close'
 import Simple_listviewitem from 'components/Simple_listviewitem';
+import HeaderBarItem from 'sf-core/ui/headerbaritem';
 
 import * as peopleService from 'services/people';
 
@@ -54,6 +54,15 @@ export default class Page1 extends Page1Design {
         this.listView1.itemCount = store.getState().people.peopleList.length;
         this.listView1.refreshData();
     }
+    initHeaderButtons() {
+        const rightItem = new HeaderBarItem({
+            image: 'images://settings.png',
+            onPress: () => {
+                console.log("You pressed Done item!");
+            }
+        });
+        this.headerBar.setItems([rightItem]);
+    }
 }
 
 /**
@@ -75,8 +84,8 @@ function onShow(superOnShow: () => void) {
 function onLoad(superOnLoad: () => void) {
     superOnLoad();
     this.initListView();
+    this.initHeaderButtons();
     this.fetchPeople();
-    BackClose.setDefaultBackStyle({ image: null, hideTitle: '' })
 }
 
 function onHide(superOnHide: () => void) {

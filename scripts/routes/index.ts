@@ -6,6 +6,10 @@ import {
 } from "@smartface/router";
 import "sf-extension-utils/lib/router/goBack"; // Implements onBackButtonPressed
 
+import BackClose from 'sf-extension-utils/lib/router/back-close'
+
+BackClose.setDefaultBackStyle({ image: null, hideTitle: '' })
+
 const router = Router.of({
     path: "/",
     isRoot: true,
