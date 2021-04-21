@@ -1,96 +1,143 @@
 {
 	"components": [
 		{
-			"type": "Page",
-			"id": "c76a-c1e1-be11-1ee5",
-			"userProps": {},
 			"className": ".sf-page",
+			"id": "c76a-c1e1-be11-1ee5",
+			"initialized": true,
 			"props": {
-				"name": "pgSettings",
-				"parent": null,
 				"children": [
 					"30b3-5064-5bb8-46ce",
-					"a4c8-50f7-4f6c-e366"
+					"a4c8-50f7-4f6c-e366",
+					"39ba-61f0-c276-5a56"
 				],
-				"orientation": "PORTRAIT"
-			},
-			"initialized": false
-		},
-		{
-			"type": "StatusBar",
-			"id": "30b3-5064-5bb8-46ce",
-			"userProps": {},
-			"className": ".sf-statusBar",
-			"props": {
-				"name": "statusBar",
-				"parent": "c76a-c1e1-be11-1ee5",
-				"children": [],
-				"visible": true,
-				"isRemovable": false
-			}
-		},
-		{
-			"type": "HeaderBar",
-			"id": "a4c8-50f7-4f6c-e366",
-			"userProps": {
-				"title": "pgSettings"
-			},
-			"className": ".sf-headerBar",
-			"props": {
-				"name": "headerBar",
-				"parent": "c76a-c1e1-be11-1ee5",
-				"children": [],
-				"title": "pgSettings",
-				"visible": true,
-				"isRemovable": false
-			}
-		}
-	],
-	"componentByID": {
-		"8ea0-6fd8-32fd-c1d0": {
-			"type": "Page",
-			"id": "c76a-c1e1-be11-1ee5",
-			"userProps": {},
-			"className": ".sf-page",
-			"props": {
 				"name": "pgSettings",
-				"parent": null,
-				"children": [
-					"30b3-5064-5bb8-46ce",
-					"a4c8-50f7-4f6c-e366"
-				],
-				"orientation": "PORTRAIT"
+				"orientation": "PORTRAIT",
+				"parent": null
 			},
-			"initialized": false
+			"type": "Page",
+			"userProps": {}
 		},
-		"eca6-6605-3c2d-fb4e": {
-			"type": "StatusBar",
-			"id": "30b3-5064-5bb8-46ce",
-			"userProps": {},
+		{
 			"className": ".sf-statusBar",
+			"id": "30b3-5064-5bb8-46ce",
 			"props": {
-				"name": "statusBar",
-				"parent": "c76a-c1e1-be11-1ee5",
 				"children": [],
-				"visible": true,
-				"isRemovable": false
-			}
-		},
-		"c44d-34ee-4a4f-97b8": {
-			"type": "HeaderBar",
-			"id": "a4c8-50f7-4f6c-e366",
-			"userProps": {
-				"title": "pgSettings"
+				"isRemovable": false,
+				"name": "statusBar",
+				"parent": "c76a-c1e1-be11-1ee5"
 			},
+			"type": "StatusBar",
+			"userProps": {}
+		},
+		{
 			"className": ".sf-headerBar",
+			"id": "a4c8-50f7-4f6c-e366",
 			"props": {
+				"children": [],
+				"isRemovable": false,
 				"name": "headerBar",
 				"parent": "c76a-c1e1-be11-1ee5",
+				"title": "Settings"
+			},
+			"type": "HeaderBar",
+			"userProps": {
+				"title": "Settings"
+			}
+		},
+		{
+			"className": ".sf-flexLayout",
+			"id": "39ba-61f0-c276-5a56",
+			"props": {
+				"children": [
+					"a043-d7ce-ff66-dd32"
+				],
+				"name": "flSettings",
+				"parent": "c76a-c1e1-be11-1ee5",
+				"usePageVariable": true
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {
+					"alignSelf": "STRETCH",
+					"flexGrow": 1,
+					"direction": "INHERIT",
+					"flexDirection": "ROW",
+					"alignItems": "STRETCH",
+					"justifyContent": "CENTER",
+					"alignContent": "CENTER"
+				},
+				"testId": "Hm1NBSM8W",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout",
+			"id": "a043-d7ce-ff66-dd32",
+			"props": {
+				"children": [
+					"7f67-2a0a-3e9d-fcd2",
+					"ff16-ac54-8bb6-600e"
+				],
+				"name": "flTheme",
+				"parent": "39ba-61f0-c276-5a56"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {
+					"flexGrow": 1,
+					"justifyContent": "CENTER",
+					"alignContent": "CENTER",
+					"alignItems": "CENTER",
+					"flexDirection": "ROW"
+				},
+				"height": 50,
+				"testId": "NHQRMjpSd"
+			}
+		},
+		{
+			"className": ".sf-label",
+			"id": "7f67-2a0a-3e9d-fcd2",
+			"props": {
 				"children": [],
-				"title": "pgSettings",
-				"visible": true,
-				"isRemovable": false
+				"name": "lblTheme",
+				"parent": "a043-d7ce-ff66-dd32",
+				"text": "Theme"
+			},
+			"type": "Label",
+			"userProps": {
+				"flexProps": {
+					"flexGrow": 1
+				},
+				"font": {
+					"size": 24,
+					"bold": true,
+					"italic": false,
+					"family": "SFProText",
+					"style": "Semibold"
+				},
+				"testId": "IFb5wpBiU",
+				"text": "Theme"
+			}
+		},
+		{
+			"className": ".sf-switch",
+			"id": "ff16-ac54-8bb6-600e",
+			"props": {
+				"children": [],
+				"name": "swTheme",
+				"parent": "a043-d7ce-ff66-dd32",
+				"toggle": true,
+				"usePageVariable": true
+			},
+			"type": "Switch",
+			"userProps": {
+				"android": {
+					"toggleOffColor": "rgba( 151, 141, 141, 1 )"
+				},
+				"testId": "floeoP7MC",
+				"toggle": true,
+				"usePageVariable": true
 			}
 		}
-	}
+	]
 }

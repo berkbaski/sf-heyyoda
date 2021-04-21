@@ -38,6 +38,13 @@ const router = Router.of({
                         headerBarStyle: { visible: true }
                     })
                 }),
+                Route.of({
+                    path: "/pages/pgSettings",
+                    build: buildExtender({
+                        getPageClass: () => require("pages/pgSettings").default,
+                        headerBarStyle: { visible: true }
+                    })
+                }),
             ]
         })
     ]
