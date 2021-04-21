@@ -1,9 +1,7 @@
 import PgPeopleListDesign from 'generated/pages/pgPeopleList';
-import Simple_listviewitem from 'components/Simple_listviewitem';
+import LviPerson from 'components/LviPerson';
 import HeaderBarItem from 'sf-core/ui/headerbaritem';
-
 import * as peopleService from 'services/people';
-
 import store from 'duck/store';
 
 export default class PgPeopleList extends PgPeopleListDesign {
@@ -31,9 +29,9 @@ export default class PgPeopleList extends PgPeopleListDesign {
         }
     }
     initListView() {
-        this.listView1.rowHeight = Simple_listviewitem.getHeight();
-        this.listView1.onRowBind = (listViewItem: Simple_listviewitem, index: number) => {
-            listViewItem.titleText = store.getState().people.peopleList[index].name;
+        this.lvPerson.rowHeight = LviPerson.getHeight();
+        this.lvPerson.onRowBind = (listViewItem: LviPerson, index: number) => {
+            listViewItem.name = store.getState().people.peopleList[index].name;
             listViewItem.image = "images://smartface.png";
 
             if (index + 1 < store.getState().people.peopleList.length) {
@@ -45,14 +43,14 @@ export default class PgPeopleList extends PgPeopleListDesign {
 
             this.fetchPeople();
         };
-        this.listView1.onRowSelected = (_item: Simple_listviewitem, index: number) => {
+        this.lvPerson.onRowSelected = (_item: LviPerson, index: number) => {
             this.router.push("/pages/pgPeopleDetail", { peopleIndex: index });
         }
-        this.listView1.refreshEnabled = false;
+        this.lvPerson.refreshEnabled = false;
     }
     refreshListView() {
-        this.listView1.itemCount = store.getState().people.peopleList.length;
-        this.listView1.refreshData();
+        this.lvPerson.itemCount = store.getState().people.peopleList.length;
+        this.lvPerson.refreshData();
     }
     initHeaderButtons() {
         const rightItem = new HeaderBarItem({

@@ -65,7 +65,7 @@
 			"id": "df0c-595e-fd97-3ac4",
 			"props": {
 				"children": [],
-				"name": "imageView1",
+				"name": "ivPeople",
 				"parent": "7761adc8",
 				"usePageVariable": true
 			},
@@ -83,7 +83,7 @@
 				"children": [
 					"198e-60d3-eda6-f392"
 				],
-				"name": "listView2",
+				"name": "lvProperties",
 				"parent": "7761adc8",
 				"usePageVariable": true
 			},
@@ -101,10 +101,10 @@
 			"className": ".sf-listViewItem .sf-listViewItem-simple",
 			"hiddenComponent": false,
 			"id": "198e-60d3-eda6-f392",
-			"initialized": true,
+			"initialized": false,
 			"props": {
 				"children": [],
-				"name": "simple_listviewitem_1",
+				"name": "lviProperty",
 				"parent": "f40d-b6c5-42cb-3907"
 			},
 			"source": {

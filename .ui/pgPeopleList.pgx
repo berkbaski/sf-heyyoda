@@ -67,7 +67,7 @@
 				"children": [
 					"6169-1b05-b114-4486"
 				],
-				"name": "listView1",
+				"name": "lvPerson",
 				"parent": "e891b86d",
 				"usePageVariable": true
 			},
@@ -85,10 +85,10 @@
 			"className": ".sf-listViewItem .sf-listViewItem-simple",
 			"hiddenComponent": false,
 			"id": "6169-1b05-b114-4486",
-			"initialized": true,
+			"initialized": false,
 			"props": {
 				"children": [],
-				"name": "simple_listviewitem",
+				"name": "lviPerson",
 				"parent": "82bb-fa91-d4ee-89b1"
 			},
 			"source": {

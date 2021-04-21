@@ -1,6 +1,6 @@
-import Simple_listviewitemDesign_1 from 'generated/my-components/Simple_listviewitem_1';
+import LviPropertyDesign from 'generated/my-components/LviProperty';
 
-export default class Simple_listviewitem_1 extends Simple_listviewitemDesign_1 {
+export default class LviProperty extends LviPropertyDesign {
     pageName?: string | undefined;
     constructor(props?: any, pageName?: string) {
         // Initalizes super class for this scope

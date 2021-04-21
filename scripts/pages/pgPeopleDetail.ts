@@ -1,23 +1,14 @@
 import PgPeopleDetailDesign from 'generated/pages/pgPeopleDetail';
-import HeaderBarItem from "sf-core/ui/headerbaritem";
-import touch from "sf-extension-utils/lib/touch";
-import Image from "sf-core/ui/image";
-import PageTitleLayout from "components/PageTitleLayout";
-import Simple_listviewitem_1 from '../components/Simple_listviewitem_1';
-import componentContextPatch from "@smartface/contx/lib/smartface/componentContextPatch";
+import LviProperty from '../components/LviProperty';
 import Color from "sf-core/ui/color";
 import AttributedString from 'sf-core/ui/attributedstring';
-import System from "sf-core/device/system";
 import { People } from 'services/types/people';
-import moment from 'moment';
 import store from 'duck/store';
 
 export default class PgPeopleDetail extends PgPeopleDetailDesign {
     details: [string, any];
     peopleName: string;
-
     router: any;
-
     constructor() {
         super();
         // Overrides super.onShow method
@@ -29,8 +20,8 @@ export default class PgPeopleDetail extends PgPeopleDetailDesign {
         this.headerBar.title = this.peopleName;
     }
     initListView() {
-        this.listView2.rowHeight = Simple_listviewitem_1.getHeight();
-        this.listView2.onRowBind = (listViewItem: Simple_listviewitem_1, index: number) => {
+        this.lvProperties.rowHeight = LviProperty.getHeight();
+        this.lvProperties.onRowBind = (listViewItem: LviProperty, index: number) => {
             listViewItem.keyText = this.details[index][0];
             listViewItem.valueText = this.details[index][1];
 
@@ -44,18 +35,18 @@ export default class PgPeopleDetail extends PgPeopleDetailDesign {
                 attributeString.foregroundColor = Color.BLUE;
                 listViewItem.lblValue.attributedText = [attributeString];
                 listViewItem.lblValue.onLinkClick = () => {
-                    this.router.push("/pages/pgPageLinkDetail", { key: this.details[index][0], value: this.details[index][1] });
+                    this.router.push("/pages/pgPeopleLinkDetail", { key: this.details[index][0], value: this.details[index][1] });
                 }
             }
         };
-        this.listView2.refreshEnabled = false;
+        this.lvProperties.refreshEnabled = false;
     }
     refreshListView() {
-        this.listView2.itemCount = this.details.length;
-        this.listView2.refreshData();
+        this.lvProperties.itemCount = this.details.length;
+        this.lvProperties.refreshData();
     }
     showImage() {
-        this.imageView1.image = "images://smartface.png";
+        this.ivPeople.image = "images://smartface.png";
     }
     checkIsLink(value: string) {
         const pattern = new RegExp('^(https?:\\/\\/)?' + // protocol

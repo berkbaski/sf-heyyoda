@@ -12,7 +12,7 @@
 					"8474-887d-3102-405e",
 					"bd8f-5e00-4110-7fd7"
 				],
-				"name": "simple_listviewitem",
+				"name": "lviPerson",
 				"parent": "57f4-201f-4bfc-5fc6"
 			},
 			"source": {
@@ -30,7 +30,7 @@
 			"id": "55f5-f296-a37b-fc7f",
 			"props": {
 				"children": [],
-				"name": "imageView1",
+				"name": "ivPerson",
 				"parent": "1841-ff9a-b968-028d",
 				"usePageVariable": true
 			},
@@ -52,7 +52,7 @@
 				"autoHeight": 51.086956521739125,
 				"autoWidth": 134.91847826086956,
 				"children": [],
-				"name": "lblTitle",
+				"name": "lblName",
 				"parent": "1841-ff9a-b968-028d",
 				"text": "ListView Cell Title",
 				"usePageVariable": true

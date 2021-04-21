@@ -1,6 +1,6 @@
 import PgPeopleLinkDetailDesign from 'generated/pages/pgPeopleLinkDetail';
+import LviProperty from 'components/LviProperty';
 import { execute } from 'services/people'
-import Simple_listviewitem_1 from 'components/Simple_listviewitem_1';
 
 export default class PgPeopleLinkDetail extends PgPeopleLinkDetailDesign {
     key: string;
@@ -20,22 +20,21 @@ export default class PgPeopleLinkDetail extends PgPeopleLinkDetailDesign {
         try {
             const res = await execute(this.value);
             this.data = Object.entries(res).filter((value) => ['string', 'number', 'boolean'].includes(typeof value[1]))
-            console.log(this.data)
         } catch (error) {
             console.log(error)
         }
     }
     initListView() {
-        this.listView1.rowHeight = Simple_listviewitem_1.getHeight();
-        this.listView1.onRowBind = (listViewItem: Simple_listviewitem_1, index: number) => {
+        this.lvProperties.rowHeight = LviProperty.getHeight();
+        this.lvProperties.onRowBind = (listViewItem: LviProperty, index: number) => {
             listViewItem.keyText = this.data[index][0];
             listViewItem.valueText = this.data[index][1];
         };
-        this.listView1.refreshEnabled = false;
+        this.lvProperties.refreshEnabled = false;
     }
     refreshListView() {
-        this.listView1.itemCount = this.data.length;
-        this.listView1.refreshData();
+        this.lvProperties.itemCount = this.data.length;
+        this.lvProperties.refreshData();
     }
 }
 

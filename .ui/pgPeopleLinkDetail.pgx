@@ -51,7 +51,7 @@
 				"children": [
 					"5ef5-18f6-e6bc-0be7"
 				],
-				"name": "listView1",
+				"name": "lvProperties",
 				"parent": "f1e9-56c6-2229-7296",
 				"usePageVariable": true
 			},
@@ -69,10 +69,10 @@
 			"className": ".sf-listViewItem .sf-listViewItem-simple",
 			"hiddenComponent": false,
 			"id": "5ef5-18f6-e6bc-0be7",
-			"initialized": true,
+			"initialized": false,
 			"props": {
 				"children": [],
-				"name": "simple_listviewitem_1",
+				"name": "lviProperty",
 				"parent": "dbdd-35c1-9b1c-0ca9"
 			},
 			"source": {

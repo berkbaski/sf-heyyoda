@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="___library___MaterialTextBox" type="id" />
+    <item name="___library___LviPerson" type="id" />
+    <item name="___library___LviProperty" type="id" />
     <item name="___library___PageTitleLayout" type="id" />
-    <item name="___library___Simple_gridviewItem" type="id" />
-    <item name="___library___Simple_listviewitem" type="id" />
-    <item name="___library___Simple_listviewitem_1" type="id" />
-    <item name="___library___Simple_listviewitem_1_LblKey" type="id" />
-    <item name="___library___Simple_gridviewItem_ImgPreview" type="id" />
-    <item name="___library___Simple_listviewitem_ImageView1" type="id" />
+    <item name="___library___LviProperty_LblKey" type="id" />
+    <item name="___library___LviPerson_IvPerson" type="id" />
     <item name="___library___PageTitleLayout_Logo" type="id" />
-    <item name="___library___Simple_listviewitem_1_LblValue" type="id" />
-    <item name="___library___Simple_listviewitem_LblTitle" type="id" />
-    <item name="___library___Simple_gridviewItem_LblTitle" type="id" />
-    <item name="___library___Simple_listviewitem_LblChevron" type="id" />
-    <item name="___library___Simple_listviewitem_1_FlLine" type="id" />
-    <item name="___library___Simple_gridviewItem_LblSubtitle" type="id" />
-    <item name="___library___Simple_listviewitem_FlLine" type="id" />
-    <item name="_PgPeopleDetail_ImageView1" type="id" />
-    <item name="_PgPeopleDetail_ListView2" type="id" />
-    <item name="_PgPeopleDetail_ListView2_Simple_listviewitem_1" type="id" />
-    <item name="_PgPeopleLinkDetail_ListView1" type="id" />
-    <item name="_PgPeopleLinkDetail_ListView1_Simple_listviewitem_1" type="id" />
-    <item name="_PgPeopleList_ListView1" type="id" />
-    <item name="_PgPeopleList_ListView1_Simple_listviewitem" type="id" />
+    <item name="___library___LviProperty_LblValue" type="id" />
+    <item name="___library___LviPerson_LblName" type="id" />
+    <item name="___library___LviPerson_LblChevron" type="id" />
+    <item name="___library___LviProperty_FlLine" type="id" />
+    <item name="___library___LviPerson_FlLine" type="id" />
+    <item name="_PgPeopleDetail_IvPeople" type="id" />
+    <item name="_PgPeopleDetail_LvProperties" type="id" />
+    <item name="_PgPeopleDetail_LvProperties_LviProperty" type="id" />
+    <item name="_PgPeopleLinkDetail_LvProperties" type="id" />
+    <item name="_PgPeopleLinkDetail_LvProperties_LviProperty" type="id" />
+    <item name="_PgPeopleList_LvPerson" type="id" />
+    <item name="_PgPeopleList_LvPerson_LviPerson" type="id" />
 </resources>
