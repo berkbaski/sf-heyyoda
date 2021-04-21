@@ -1,11 +1,11 @@
 {
     "info": {
-        "name": "Smartface Empty Workspace",
-        "company": "Smartface User",
+        "name": "Heyyoda",
+        "company": "Smartface",
         "webSite": "https://www.smartface.io",
         "version": "1.0.0",
         "runtimeVersion": "1100",
-        "description": "This is Smartface's default empty project. You can click to Run on Device button to see it on your device."
+        "description": "Are you ready for Starwars world?"
     },
     "config": {
         "cache": {
@@ -78,10 +78,8 @@
                     "keyPass": "smartface"
                 },
                 "plugins": {
-                    "aars": {
-                    },
-                    "modules": {
-                    }
+                    "aars": {},
+                    "modules": {}
                 },
                 "playerPath": null
             },
