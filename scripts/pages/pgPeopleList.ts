@@ -1,4 +1,4 @@
-import Page1Design from 'generated/pages/page1';
+import PgPeopleListDesign from 'generated/pages/pgPeopleList';
 import Simple_listviewitem from 'components/Simple_listviewitem';
 import HeaderBarItem from 'sf-core/ui/headerbaritem';
 
@@ -6,7 +6,7 @@ import * as peopleService from 'services/people';
 
 import store from 'duck/store';
 
-export default class Page1 extends Page1Design {
+export default class PgPeopleList extends PgPeopleListDesign {
     unsubsribe: ReturnType<typeof store.subscribe> = () => { };
     router: any;
     page = 0;
@@ -46,7 +46,7 @@ export default class Page1 extends Page1Design {
             this.fetchPeople();
         };
         this.listView1.onRowSelected = (_item: Simple_listviewitem, index: number) => {
-            this.router.push("/pages/page2", { peopleIndex: index });
+            this.router.push("/pages/pgPeopleDetail", { peopleIndex: index });
         }
         this.listView1.refreshEnabled = false;
     }

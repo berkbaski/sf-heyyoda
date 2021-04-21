@@ -16,11 +16,11 @@
     <item name="___library___Simple_listviewitem_1_FlLine" type="id" />
     <item name="___library___Simple_gridviewItem_LblSubtitle" type="id" />
     <item name="___library___Simple_listviewitem_FlLine" type="id" />
-    <item name="_Page1_ListView1" type="id" />
-    <item name="_Page1_ListView1_Simple_listviewitem" type="id" />
-    <item name="_Page2_ImageView1" type="id" />
-    <item name="_Page2_ListView2" type="id" />
-    <item name="_Page2_ListView2_Simple_listviewitem_1" type="id" />
-    <item name="_Page3_ListView1" type="id" />
-    <item name="_Page3_ListView1_Simple_listviewitem_1" type="id" />
+    <item name="_PgPeopleDetail_ImageView1" type="id" />
+    <item name="_PgPeopleDetail_ListView2" type="id" />
+    <item name="_PgPeopleDetail_ListView2_Simple_listviewitem_1" type="id" />
+    <item name="_PgPeopleLinkDetail_ListView1" type="id" />
+    <item name="_PgPeopleLinkDetail_ListView1_Simple_listviewitem_1" type="id" />
+    <item name="_PgPeopleList_ListView1" type="id" />
+    <item name="_PgPeopleList_ListView1_Simple_listviewitem" type="id" />
 </resources>

@@ -1,8 +1,8 @@
-import Page3Design from 'generated/pages/page3';
+import PgPeopleLinkDetailDesign from 'generated/pages/pgPeopleLinkDetail';
 import { execute } from 'services/people'
 import Simple_listviewitem_1 from 'components/Simple_listviewitem_1';
 
-export default class Page3 extends Page3Design {
+export default class PgPeopleLinkDetail extends PgPeopleLinkDetailDesign {
     key: string;
     value: string;
     data = [];

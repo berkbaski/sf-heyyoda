@@ -11,7 +11,7 @@
 					"82bb-fa91-d4ee-89b1"
 				],
 				"isRemovable": true,
-				"name": "page1",
+				"name": "pgPeopleList",
 				"orientation": "PORTRAIT",
 				"parent": null,
 				"safeAreaEnabled": true

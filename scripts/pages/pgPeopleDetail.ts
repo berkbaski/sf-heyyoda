@@ -1,4 +1,4 @@
-import Page2Design from 'generated/pages/page2';
+import PgPeopleDetailDesign from 'generated/pages/pgPeopleDetail';
 import HeaderBarItem from "sf-core/ui/headerbaritem";
 import touch from "sf-extension-utils/lib/touch";
 import Image from "sf-core/ui/image";
@@ -9,10 +9,10 @@ import Color from "sf-core/ui/color";
 import AttributedString from 'sf-core/ui/attributedstring';
 import System from "sf-core/device/system";
 import { People } from 'services/types/people';
-import moment from 'moment'
+import moment from 'moment';
 import store from 'duck/store';
 
-export default class Page2 extends Page2Design {
+export default class PgPeopleDetail extends PgPeopleDetailDesign {
     details: [string, any];
     peopleName: string;
 
@@ -44,7 +44,7 @@ export default class Page2 extends Page2Design {
                 attributeString.foregroundColor = Color.BLUE;
                 listViewItem.lblValue.attributedText = [attributeString];
                 listViewItem.lblValue.onLinkClick = () => {
-                    this.router.push("/pages/page3", { key: this.details[index][0], value: this.details[index][1] });
+                    this.router.push("/pages/pgPageLinkDetail", { key: this.details[index][0], value: this.details[index][1] });
                 }
             }
         };

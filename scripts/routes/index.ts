@@ -18,23 +18,23 @@ const router = Router.of({
             path: "/pages",
             routes: [
                 Route.of({
-                    path: "/pages/page1",
+                    path: "/pages/pgPeopleList",
                     build: buildExtender({
-                        getPageClass: () => require("pages/page1").default,
+                        getPageClass: () => require("pages/pgPeopleList").default,
                         headerBarStyle: { visible: true }
                     })
                 }),
                 Route.of({
-                    path: "/pages/page2",
+                    path: "/pages/pgPeopleDetail",
                     build: buildExtender({
-                        getPageClass: () => require("pages/page2").default,
+                        getPageClass: () => require("pages/pgPeopleDetail").default,
                         headerBarStyle: { visible: true }
                     })
                 }),
                 Route.of({
-                    path: "/pages/page3",
+                    path: "/pages/pgPeopleLinkDetail",
                     build: buildExtender({
-                        getPageClass: () => require("pages/page3").default,
+                        getPageClass: () => require("pages/pgPeopleLinkDetail").default,
                         headerBarStyle: { visible: true }
                     })
                 }),
