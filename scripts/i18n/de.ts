@@ -22,9 +22,10 @@ SMF.i18n.defineLanguage('de', {
     "language": "Sprache",
     "darkTheme": "Dunkles Thema",
     "change": "Veränderung",
+    "success": "Erfolg",
+    "langChanged": "Die Sprache wurde geändert. Die Anwendung sollte neu gestartet werden.",
+    "restart": "Neu starten",
 
     "starWarsCharacters": "Star Wars Charaktere",
     "openLink": "Verbindung öffnen",
-
-    "langChanged": "Ihre Sprache wurde geändert. Bitte starten Sie die Anwendung neu.",
 });

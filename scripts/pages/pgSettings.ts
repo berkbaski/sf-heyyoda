@@ -4,6 +4,7 @@ import Application from 'sf-core/application';
 import AttributedString from 'sf-core/ui/attributedstring';
 import Menu from 'sf-core/ui/menu';
 import MenuItem from 'sf-core/ui/menuitem';
+import AlertView from 'sf-core/ui/alertview';
 import { ThemeService } from 'theme';
 import { setLanguage } from 'lib/language-helper';
 
@@ -46,11 +47,19 @@ export default class PgSettings extends PgSettingsDesign {
                     title: global.lang[lang],
                     onSelected: function () {
                         setLanguage(lang);
-                        alert(SMF.i18n.languageKV[lang].langChanged);
 
-                        setTimeout(() => {
-                            Application.restart();
-                        }, 1000);
+                        const alertView = new AlertView({
+                            title: SMF.i18n.languageKV[lang].success,
+                            message: SMF.i18n.languageKV[lang].langChanged,
+                        });
+                        alertView.addButton({
+                            index: AlertView.ButtonType.NEUTRAL,
+                            text: SMF.i18n.languageKV[lang].restart,
+                            onClick: function (): void {
+                                Application.restart();
+                            }
+                        });
+                        alertView.show();
                     }
                 });
                 menu.items.push(menuItem);

@@ -53,9 +53,11 @@ SMF.i18n.defineLanguage('en', {
     "language": "Language",
     "darkTheme": "Dark Theme",
     "change": "Change",
+    "success": "Success",
+    "langChanged": "The language has been changed. The application should restart.",
+    "restart": "Restart",
 
     "starWarsCharacters": "Star Wars Characters",
     "openLink": "Open Link",
 
-    "langChanged": "Your language has been changed. Please restart the application.",
 });

@@ -51,9 +51,10 @@ SMF.i18n.defineLanguage('tr', {
     "language": "Dil",
     "darkTheme": "Karanlık Tema",
     "change": "Değiştir",
+    "success": "Başarılı",
+    "langChanged": "Dil değiştirildi. Uygulama yeniden başlamalıdır.",
+    "restart": "Yeniden Başlat",
 
     "starWarsCharacters": "Yıldız Savaşları Karakterleri",
     "openLink": "Linki Aç",
-
-    "langChanged": "Diliniz değiştirildi. Lütfen uygulamayı yeniden başlatın.",
 });
