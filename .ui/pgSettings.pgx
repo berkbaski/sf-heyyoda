@@ -78,7 +78,7 @@
 			"props": {
 				"children": [
 					"b7d2-1330-02fa-5193",
-					"0da6-bad2-52a6-2a97"
+					"67b7-26e2-ed98-e3d8"
 				],
 				"name": "flLanguage",
 				"parent": "39ba-61f0-c276-5a56"
@@ -113,24 +113,30 @@
 				},
 				"testId": "f0tEsTRC4",
 				"text": "Language",
-				"usePageVariable": true
+				"usePageVariable": true,
+				"width": null
 			}
 		},
 		{
-			"className": ".sf-textView",
-			"id": "0da6-bad2-52a6-2a97",
+			"className": ".sf-label .sf-label-change",
+			"id": "67b7-26e2-ed98-e3d8",
 			"props": {
 				"children": [],
-				"html": "<span style=\"font-family: SFProText-Regular; font-size: 16px; white-space: pre-wrap; background-color: rgb(255, 255, 255);\">Lorem ipsum dolor sit amet, consectetur \n  adipiscing elit. <span style=\"color: rgb(0, 161, 241); font-size: 17.3913px; font-family: SFProText-Regular; background-color: rgb(255, 255, 255);\">Donec quis semper justo. In  \n  ultrices metus nec sodales consectetur.</span> \n  Aliquam erat volutpat. <span style=\"font-size: 16px; font-family: SFProText-Regular; background-color: rgb(255, 255, 255); text-decoration-color: rgb(0, 0, 0); text-decoration-line: underline;\">Suspendisse</span> potenti.</span><br>",
-				"name": "tvChange",
+				"name": "lblChange",
 				"parent": "5ccc-f512-7eda-09a6",
+				"text": "Language",
 				"usePageVariable": true
 			},
-			"type": "TextView",
+			"type": "Label",
 			"userProps": {
-				"html": "<span style=\"font-family: SFProText-Regular; font-size: 16px; white-space: pre-wrap; background-color: rgb(255, 255, 255);\">Lorem ipsum dolor sit amet, consectetur \n  adipiscing elit. <span style=\"color: rgb(0, 161, 241); font-size: 17.3913px; font-family: SFProText-Regular; background-color: rgb(255, 255, 255);\">Donec quis semper justo. In  \n  ultrices metus nec sodales consectetur.</span> \n  Aliquam erat volutpat. <span style=\"font-size: 16px; font-family: SFProText-Regular; background-color: rgb(255, 255, 255); text-decoration-color: rgb(0, 0, 0); text-decoration-line: underline;\">Suspendisse</span> potenti.</span><br>",
-				"testId": "3kwEqgHe9",
-				"usePageVariable": true
+				"flexProps": {
+					"flexGrow": 1
+				},
+				"testId": "f0tEsTRC4",
+				"text": "Language",
+				"textAlignment": "MIDRIGHT",
+				"usePageVariable": true,
+				"width": null
 			}
 		},
 		{

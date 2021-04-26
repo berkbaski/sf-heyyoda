@@ -127,9 +127,19 @@
 		},
 		"&-textView": {
 			"&-change": {
-				"flexProps": {},
-				"testId": "5Q6bORuqA",
-				"textColor": "rgba( 248, 231, 28, 1 )"
+				"testId": "3kwEqgHe9",
+				"height": 50,
+				"flexProps": {
+					"flexGrow": 1
+				},
+				"textColor": "rgba( 0, 0, 0, 1 )",
+				"ellipsizeMode": "MIDDLE",
+				"textAlignment": "MIDRIGHT"
+			}
+		},
+		"&-label": {
+			"&-change": {
+				"textColor": "rgba( 255, 255, 255, 1 )"
 			}
 		}
 	}

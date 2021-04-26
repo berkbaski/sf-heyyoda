@@ -33,13 +33,10 @@ export default class PgSettings extends PgSettingsDesign {
     initText() {
         this.lblLanguage.text = `${global.lang.language} - ${SMF.i18n.currentLang.toUpperCase()}`;
         this.lblTheme.text = global.lang.darkTheme;
+        this.lblChange.text = global.lang.change;
     }
     initChangeButton() {
-        const attributeString = new AttributedString();
-        attributeString.string = global.lang.change;
-        attributeString.link = global.lang.change;
-        this.tvChange.attributedText = [attributeString];
-        this.tvChange.onLinkClick = () => {
+        this.lblChange.onTouchEnded = () => {
             const menu = new Menu();
             menu.headerTitle = global.lang.language;
             menu.items = [];
