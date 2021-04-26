@@ -114,6 +114,9 @@
 					"marginTop": null,
 					"right": 0
 				}
+			},
+			"&-active": {
+				"backgroundColor": "rgba( 136, 136, 136, 1 )"
 			}
 		},
 		"&-listView": {

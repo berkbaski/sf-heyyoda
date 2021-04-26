@@ -14,6 +14,11 @@
 			"&-change": {
 				"textColor": "rgba( 0, 0, 0, 1 )"
 			}
+		},
+		"&-listViewItem": {
+			"&-active": {
+				"backgroundColor": "rgba( 245, 245, 245, 1 )"
+			}
 		}
 	}
 }

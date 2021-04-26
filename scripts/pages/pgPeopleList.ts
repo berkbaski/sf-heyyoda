@@ -1,4 +1,8 @@
 import PgPeopleListDesign from 'generated/pages/pgPeopleList';
+
+import pushClassNames from "@smartface/contx/lib/styling/action/pushClassNames";
+import removeClassName from "@smartface/contx/lib/styling/action/removeClassName";
+
 import LviPerson from 'components/LviPerson';
 import HeaderBarItem from 'sf-core/ui/headerbaritem';
 import * as peopleService from 'services/people';
@@ -33,6 +37,16 @@ export default class PgPeopleList extends PgPeopleListDesign {
         this.lvPerson.onRowBind = (listViewItem: LviPerson, index: number) => {
             listViewItem.name = store.getState().people.peopleList[index].name;
             listViewItem.image = "images://darthvader.png";
+
+            if (index % 2 == 1) {
+                listViewItem.dispatch(
+                    pushClassNames('.sf-listViewItem-active')
+                );
+            } else {
+                listViewItem.dispatch(
+                    removeClassName('.sf-listViewItem-active')
+                );
+            }
 
             if (index + 1 < store.getState().people.peopleList.length) {
                 return; // Don't call service when scroll isn't at the bottom
