@@ -46,5 +46,6 @@ import 'i18n/de';
 import 'i18n/en';
 import 'i18n/fi';
 import 'i18n/tr';
+import { getLanguage } from 'lib/language-helper';
 
-SMF.i18n.switchLanguage(Device.language);
+SMF.i18n.switchLanguage(getLanguage() || Device.language);

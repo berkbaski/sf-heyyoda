@@ -25,7 +25,7 @@
 			}
 		},
 		{
-			"className": ".sf-label .sf-listViewItem-simple-title",
+			"className": ".sf-label",
 			"id": "1d6b-30be-9567-2699",
 			"props": {
 				"autoHeight": 51.086956521739125,
@@ -55,7 +55,6 @@
 				},
 				"marginLeft": 16,
 				"text": "ListView Cell Title",
-				"textColor": "rgba( 74, 144, 226, 1 )",
 				"usePageVariable": true
 			}
 		},

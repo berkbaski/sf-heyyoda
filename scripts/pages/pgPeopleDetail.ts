@@ -28,10 +28,9 @@ export default class PgPeopleDetail extends PgPeopleDetailDesign {
             const isLink = this.checkIsLink(this.details[index][1]);
             if (isLink) {
                 const attributeString = new AttributedString();
-                attributeString.string = `Open ${this.details[index][0]} link`;
+                attributeString.string = global.lang.openLink;
                 attributeString.link = this.details[index][1];
                 attributeString.underline = true;
-                attributeString.underlineColor = Color.BLUE;
                 attributeString.foregroundColor = Color.BLUE;
                 listViewItem.lblValue.attributedText = [attributeString];
                 listViewItem.lblValue.onLinkClick = () => {

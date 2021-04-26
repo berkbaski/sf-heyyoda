@@ -52,7 +52,8 @@ export default class PgPeopleList extends PgPeopleListDesign {
         this.lvPerson.itemCount = store.getState().people.peopleList.length;
         this.lvPerson.refreshData();
     }
-    initHeaderButtons() {
+    initHeader() {
+        this.headerBar.title = global.lang.starWarsCharacters;
         const rightItem = new HeaderBarItem({
             image: 'images://settings.png',
             onPress: () => {
@@ -82,7 +83,7 @@ function onShow(superOnShow: () => void) {
 function onLoad(superOnLoad: () => void) {
     superOnLoad();
     this.initListView();
-    this.initHeaderButtons();
+    this.initHeader();
     this.fetchPeople();
 }
 

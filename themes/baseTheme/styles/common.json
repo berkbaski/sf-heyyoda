@@ -1,2 +1,9 @@
 {
+	".sf": {
+		"&-textView": {
+			"&-change": {
+				"textColor": "rgba( 245, 7, 7, 1 )"
+			}
+		}
+	}
 }

@@ -54,7 +54,7 @@ const router = Router.of({
                                 getPageClass: () => require("pages/pgSettings").default,
                                 headerBarStyle: { visible: true }
                             })
-                        })
+                        }),
                     ]
                 }),
                 Route.of({

@@ -46,7 +46,7 @@
 			}
 		},
 		{
-			"className": ".sf-label .sf-listViewItem-simple-title",
+			"className": ".sf-label",
 			"id": "24ca-f21f-dfb6-5dc9",
 			"props": {
 				"autoHeight": 51.086956521739125,
@@ -64,6 +64,9 @@
 			"userProps": {
 				"autoHeight": 51.086956521739125,
 				"autoWidth": 134.91847826086956,
+				"flexProps": {
+					"flexGrow": 1
+				},
 				"marginLeft": 16,
 				"text": "ListView Cell Title",
 				"usePageVariable": true
@@ -87,6 +90,9 @@
 			"userProps": {
 				"autoHeight": 51.086956521739125,
 				"autoWidth": 10.478940217391305,
+				"flexProps": {
+					"flexGrow": null
+				},
 				"marginRight": 16,
 				"text": ""
 			}
