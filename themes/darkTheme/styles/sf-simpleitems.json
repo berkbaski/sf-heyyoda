@@ -118,7 +118,7 @@
 				"paddingRight": 15
 			},
 			"&-active": {
-				"backgroundColor": "rgba( 136, 136, 136, 1 )"
+				"backgroundColor": "rgba( 10, 10, 10, 1 )"
 			},
 			"&-inactive": {
 				"backgroundColor": "rgba( 18, 18, 18, 1 )"

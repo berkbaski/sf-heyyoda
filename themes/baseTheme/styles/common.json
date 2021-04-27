@@ -20,7 +20,10 @@
 				"backgroundColor": "rgba( 245, 245, 245, 1 )"
 			},
 			"paddingLeft": 15,
-			"paddingRight": 15
+			"paddingRight": 15,
+			"&-inactive": {
+				"backgroundColor": "rgba( 235, 235, 235, 1 )"
+			}
 		}
 	}
 }

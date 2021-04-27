@@ -23,7 +23,7 @@
 			}
 		},
 		{
-			"className": ".sf-flexLayout .sf-listViewItem-simple .sf-listViewItem-inactive",
+			"className": ".sf-flexLayout .sf-listViewItem-simple .sf-listViewItem-inactive .sf-listViewItem-active",
 			"id": "1fef-4b87-213d-4951",
 			"props": {
 				"children": [
