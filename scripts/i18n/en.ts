@@ -44,11 +44,9 @@ SMF.i18n.defineLanguage('en', {
     "scanFaceIDTitle": "Login with FaceID",
     "scanFaceIDMessage": "Scan your face",
     "chooseNavigationApp": "Choose Navigation App",
-
     "en": "English",
     "tr": "Turkish",
     "de": "German",
-
     "settings": "Settings",
     "language": "Language",
     "darkTheme": "Dark Theme",
@@ -56,8 +54,8 @@ SMF.i18n.defineLanguage('en', {
     "success": "Success",
     "langChanged": "The language has been changed. The application should restart.",
     "restart": "Restart",
-
     "starWarsCharacters": "Star Wars Characters",
     "openLink": "Open Link",
-
+    "detail": "Detail",
+    "someAction": "Some Action"
 });

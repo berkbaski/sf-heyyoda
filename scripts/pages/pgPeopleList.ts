@@ -3,10 +3,13 @@ import PgPeopleListDesign from 'generated/pages/pgPeopleList';
 import pushClassNames from "@smartface/contx/lib/styling/action/pushClassNames";
 import removeClassName from "@smartface/contx/lib/styling/action/removeClassName";
 
+import ListView from 'sf-core/ui/listview';
 import LviPerson from 'components/LviPerson';
 import HeaderBarItem from 'sf-core/ui/headerbaritem';
 import * as peopleService from 'services/people';
 import store from 'duck/store';
+
+import Color from "sf-core/ui/color";
 
 export default class PgPeopleList extends PgPeopleListDesign {
     unsubsribe: ReturnType<typeof store.subscribe> = () => { };
@@ -54,7 +57,45 @@ export default class PgPeopleList extends PgPeopleListDesign {
         this.lvPerson.onRowSelected = (_item: LviPerson, index: number) => {
             this.router.push("/pages/pgPeopleDetail", { peopleIndex: index });
         }
+        this.initListViewSwipe();
         this.lvPerson.refreshEnabled = false;
+    }
+    initListViewSwipe() {
+        //@ts-ignore
+        this.lvPerson.swipeEnabled = true;
+
+        this.lvPerson.onRowCanSwipe = (index: number) => {
+            return [ListView.SwipeDirection.LEFTTORIGHT, ListView.SwipeDirection.RIGHTTOLEFT];
+        };
+        this.lvPerson.onRowSwipe = (e: any): ListView.SwipeItem[] => {
+            if (e.direction == ListView.SwipeDirection.LEFTTORIGHT) {
+                const someItem = new ListView.SwipeItem();
+                someItem.text = global.lang.someAction;
+                someItem.backgroundColor = Color.BLUE;
+                someItem.textColor = Color.WHITE;
+                someItem.onPress = ({ index }) => {
+                    this.lvPerson.refreshRowRange({ itemCount: 1, positionStart: index });
+                };
+                this.applyDimension(someItem);
+                return [someItem];
+            }
+            else if (e.direction == ListView.SwipeDirection.RIGHTTOLEFT) {
+                const detailItem = new ListView.SwipeItem();
+                detailItem.text = global.lang.detail;
+                detailItem.backgroundColor = Color.WHITE;
+                detailItem.textColor = Color.BLACK;
+                detailItem.onPress = ({ index }) => {
+                    this.lvPerson.refreshRowRange({ itemCount: 1, positionStart: index });
+                    this.router.push("/pages/pgPeopleDetail", { peopleIndex: index });
+                };
+                this.applyDimension(detailItem);
+                return [detailItem];
+            }
+        };
+    }
+    applyDimension(item: any): void {
+        item.android.paddingLeft = 15;
+        item.android.paddingRight = 15;
     }
     refreshListView() {
         this.lvPerson.itemCount = store.getState().people.peopleList.length;

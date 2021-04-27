@@ -42,11 +42,9 @@ SMF.i18n.defineLanguage('tr', {
     "scanFaceIDTitle": "FaceID ile oturum aç",
     "scanFaceIDMessage": "Yüzünü tarat",
     "chooseNavigationApp": "Navigasyon uygulaması seç",
-
     "en": "İngilizce",
     "tr": "Türkçe",
     "de": "Almanca",
-
     "settings": "Ayarlar",
     "language": "Dil",
     "darkTheme": "Karanlık Tema",
@@ -54,7 +52,8 @@ SMF.i18n.defineLanguage('tr', {
     "success": "Başarılı",
     "langChanged": "Dil değiştirildi. Uygulama yeniden başlamalıdır.",
     "restart": "Yeniden Başlat",
-
     "starWarsCharacters": "Yıldız Savaşları Karakterleri",
     "openLink": "Linki Aç",
+    "detail": "Detay",
+    "someAction": "Bir Hareket"
 });

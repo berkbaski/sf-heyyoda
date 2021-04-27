@@ -4,20 +4,21 @@
     <item name="___library___LviProperty" type="id" />
     <item name="___library___PageTitleLayout" type="id" />
     <item name="___library___LviProperty_LblKey" type="id" />
-    <item name="___library___LviPerson_IvPerson" type="id" />
+    <item name="___library___LviPerson_FlPersonWrapper" type="id" />
     <item name="___library___PageTitleLayout_Logo" type="id" />
     <item name="___library___LviProperty_LblValue" type="id" />
-    <item name="___library___LviPerson_LblName" type="id" />
-    <item name="___library___LviPerson_LblChevron" type="id" />
     <item name="___library___LviProperty_FlLine" type="id" />
-    <item name="___library___LviPerson_FlLine" type="id" />
-    <item name="_PgPeopleList_LvPerson" type="id" />
-    <item name="_PgPeopleList_LvPerson_LviPerson" type="id" />
+    <item name="___library___LviPerson_FlPersonWrapper_IvPerson" type="id" />
+    <item name="___library___LviPerson_FlPersonWrapper_LblName" type="id" />
+    <item name="___library___LviPerson_FlPersonWrapper_LblChevron" type="id" />
+    <item name="___library___LviPerson_FlPersonWrapper_FlLine" type="id" />
     <item name="_PgPeopleLinkDetail_LvProperties" type="id" />
     <item name="_PgPeopleLinkDetail_LvProperties_LviProperty" type="id" />
     <item name="_PgPeopleDetail_IvPeople" type="id" />
     <item name="_PgPeopleDetail_LvProperties" type="id" />
     <item name="_PgPeopleDetail_LvProperties_LviProperty" type="id" />
+    <item name="_PgPeopleList_LvPerson" type="id" />
+    <item name="_PgPeopleList_LvPerson_LviPerson" type="id" />
     <item name="_PgSettings_FlSettings" type="id" />
     <item name="_PgSettings_FlSettings_FlLanguage" type="id" />
     <item name="_PgSettings_FlSettings_FlTheme" type="id" />
@@ -25,12 +26,4 @@
     <item name="_PgSettings_FlSettings_FlTheme_LblTheme" type="id" />
     <item name="_PgSettings_FlSettings_FlLanguage_LblChange" type="id" />
     <item name="_PgSettings_FlSettings_FlTheme_SwTheme" type="id" />
-    <item name="___library___LviPerson_FlexLayout1" type="id" />
-    <item name="___library___LviPerson_FlexLayout1_Button1" type="id" />
-    <item name="___library___LviPerson_FlPersonWrapper" type="id" />
-    <item name="___library___LviPerson_FlPersonWrapper_Button1" type="id" />
-    <item name="___library___LviPerson_FlPersonWrapper_LblName" type="id" />
-    <item name="___library___LviPerson_FlPersonWrapper_LblChevron" type="id" />
-    <item name="___library___LviPerson_FlPersonWrapper_FlLine" type="id" />
-    <item name="___library___LviPerson_FlPersonWrapper_IvPerson" type="id" />
 </resources>

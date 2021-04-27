@@ -1,7 +1,7 @@
 {
 	"config": {
 		"theme": {
-			"currentTheme": "darkTheme",
+			"currentTheme": "baseTheme",
 			"baseTheme": "baseTheme",
 			"themes": [
 				"defaultTheme",
