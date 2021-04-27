@@ -1,16 +1,13 @@
 {
 	"components": [
 		{
-			"className": ".sf-listViewItem .sf-listViewItem-simple",
+			"className": ".sf-listViewItem",
 			"hiddenComponent": false,
 			"id": "1841-ff9a-b968-028d",
 			"initialized": true,
 			"props": {
 				"children": [
-					"55f5-f296-a37b-fc7f",
-					"24ca-f21f-dfb6-5dc9",
-					"8474-887d-3102-405e",
-					"bd8f-5e00-4110-7fd7"
+					"1fef-4b87-213d-4951"
 				],
 				"name": "lviPerson",
 				"parent": "57f4-201f-4bfc-5fc6"
@@ -26,12 +23,38 @@
 			}
 		},
 		{
+			"className": ".sf-flexLayout .sf-listViewItem-simple .sf-listViewItem-inactive",
+			"id": "1fef-4b87-213d-4951",
+			"props": {
+				"children": [
+					"55f5-f296-a37b-fc7f",
+					"24ca-f21f-dfb6-5dc9",
+					"8474-887d-3102-405e",
+					"bd8f-5e00-4110-7fd7"
+				],
+				"name": "flPersonWrapper",
+				"parent": "1841-ff9a-b968-028d",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {
+					"flexGrow": 1
+				},
+				"testId": "ph7qCLXQM",
+				"usePageVariable": true
+			}
+		},
+		{
 			"className": ".sf-imageView",
 			"id": "55f5-f296-a37b-fc7f",
 			"props": {
 				"children": [],
 				"name": "ivPerson",
-				"parent": "1841-ff9a-b968-028d",
+				"parent": "1fef-4b87-213d-4951",
 				"usePageVariable": true
 			},
 			"source": {
@@ -39,10 +62,11 @@
 			},
 			"type": "ImageView",
 			"userProps": {
-				"height": 50,
+				"flexProps": {},
+				"height": 52.27272727272727,
 				"testId": "hBJ7_WQRw",
 				"usePageVariable": true,
-				"width": 50
+				"width": 45.45454545454545
 			}
 		},
 		{
@@ -53,7 +77,7 @@
 				"autoWidth": 134.91847826086956,
 				"children": [],
 				"name": "lblName",
-				"parent": "1841-ff9a-b968-028d",
+				"parent": "1fef-4b87-213d-4951",
 				"text": "ListView Cell Title",
 				"usePageVariable": true
 			},
@@ -67,9 +91,11 @@
 				"flexProps": {
 					"flexGrow": 1
 				},
+				"height": 50,
 				"marginLeft": 16,
 				"text": "ListView Cell Title",
-				"usePageVariable": true
+				"usePageVariable": true,
+				"width": 131.8181818181818
 			}
 		},
 		{
@@ -80,7 +106,7 @@
 				"autoWidth": 10.478940217391305,
 				"children": [],
 				"name": "lblChevron",
-				"parent": "1841-ff9a-b968-028d",
+				"parent": "1fef-4b87-213d-4951",
 				"text": ""
 			},
 			"source": {
@@ -103,7 +129,7 @@
 			"props": {
 				"children": [],
 				"name": "flLine",
-				"parent": "1841-ff9a-b968-028d"
+				"parent": "1fef-4b87-213d-4951"
 			},
 			"source": {
 				"page": "__library__"

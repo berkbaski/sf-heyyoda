@@ -1,0 +1,11 @@
+{
+	"#pgPeopleList": {
+		"paddingBottom": 20,
+		"flexProps": {
+			"justifyContent": "SPACE_BETWEEN",
+			"alignItems": "STRETCH"
+		},
+		"paddingLeft": 0,
+		"paddingRight": 0
+	}
+}

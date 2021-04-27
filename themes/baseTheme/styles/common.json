@@ -18,7 +18,9 @@
 		"&-listViewItem": {
 			"&-active": {
 				"backgroundColor": "rgba( 245, 245, 245, 1 )"
-			}
+			},
+			"paddingLeft": 15,
+			"paddingRight": 15
 		}
 	}
 }
