@@ -15,10 +15,10 @@
     <item name="_PgPeopleDetail_IvPeople" type="id" />
     <item name="_PgPeopleDetail_LvProperties" type="id" />
     <item name="_PgPeopleDetail_LvProperties_LviProperty" type="id" />
-    <item name="_PgPeopleLinkDetail_LvProperties" type="id" />
-    <item name="_PgPeopleLinkDetail_LvProperties_LviProperty" type="id" />
     <item name="_PgPeopleList_LvPerson" type="id" />
     <item name="_PgPeopleList_LvPerson_LviPerson" type="id" />
+    <item name="_PgPeopleLinkDetail_LvProperties" type="id" />
+    <item name="_PgPeopleLinkDetail_LvProperties_LviProperty" type="id" />
     <item name="_PgSettings_FlSettings" type="id" />
     <item name="_PgSettings_FlSettings_FlLanguage" type="id" />
     <item name="_PgSettings_FlSettings_FlTheme" type="id" />
