@@ -10,7 +10,7 @@ import System from 'sf-core/device/system';
 import BackClose from 'sf-extension-utils/lib/router/back-close'
 import Image from "sf-core/ui/image";
 
-BackClose.setDefaultBackStyle({ image: null, hideTitle: '' });
+BackClose.setDefaultBackStyle({ image: Image.createFromFile("images://close.png"), hideTitle: '' });
 
 BackClose.dissmissBuilder = () => {
     return {

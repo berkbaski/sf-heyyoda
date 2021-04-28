@@ -23,7 +23,6 @@ export default class PgPeopleDetail extends PgPeopleDetailDesign {
         this.lvProperties.rowHeight = LviProperty.getHeight();
         this.lvProperties.onRowBind = (listViewItem: LviProperty, index: number) => {
             listViewItem.keyText = this.details[index][0];
-            listViewItem.valueText = this.details[index][1];
 
             const isLink = this.checkIsLink(this.details[index][1]);
             if (isLink) {
@@ -36,6 +35,8 @@ export default class PgPeopleDetail extends PgPeopleDetailDesign {
                 listViewItem.lblValue.onLinkClick = () => {
                     this.router.push("/pages/pgPeopleLinkDetail", { key: this.details[index][0], value: this.details[index][1] });
                 }
+            } else {
+                listViewItem.valueText = this.details[index][1];
             }
         };
         this.lvProperties.refreshEnabled = false;

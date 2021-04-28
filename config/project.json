@@ -91,12 +91,12 @@
         "output": {
             "ios": {
                 "outputFolder": "output/iOS",
-                "bundleIdentifier": "io.smartface.demo",
+                "bundleIdentifier": "io.heyyoda.demo",
                 "targetedDeviceFamily": "universal"
             },
             "android": {
                 "outputFolder": "output/Android",
-                "packageName": "io.smartface.demo",
+                "packageName": "io.heyyoda.demo",
                 "obfuscationEnabled": false
             }
         },
