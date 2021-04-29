@@ -2,6 +2,7 @@ import PgPeopleListDesign from 'generated/pages/pgPeopleList';
 
 import pushClassNames from "@smartface/contx/lib/styling/action/pushClassNames";
 import removeClassName from "@smartface/contx/lib/styling/action/removeClassName";
+import Image from "sf-core/ui/image";
 
 import ListView from 'sf-core/ui/listview';
 import LviPerson from 'components/LviPerson';
@@ -110,6 +111,11 @@ export default class PgPeopleList extends PgPeopleListDesign {
             }
         });
         this.headerBar.setItems([rightItem]);
+
+        this.swPerson.addToHeaderBar(this);
+        this.swPerson.onTextChanged = () => {
+            alert('search finished');
+        }
     }
 }
 
