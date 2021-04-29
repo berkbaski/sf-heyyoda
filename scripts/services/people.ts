@@ -9,6 +9,7 @@ export async function getAll(page?: number): Promise<void> {
         const newPeopleList: PeopleGetAll = await sc.request(`/people?page=${pagination}`, { method: "GET" });
         const peopleList = [...store.getState().people.peopleList, ...newPeopleList.results];
         store.dispatch(PeopleActions.setPeopleList(peopleList));
+        store.dispatch(PeopleActions.setFilteredPeopleList(peopleList));
     } catch (error) {
         throw error;
     }
