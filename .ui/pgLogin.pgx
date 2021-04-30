@@ -1,0 +1,124 @@
+{
+	"components": [
+		{
+			"className": ".sf-page",
+			"id": "2dca-0923-99c9-d1b8",
+			"initialized": true,
+			"props": {
+				"children": [
+					"37d4-4b74-0bb2-512e",
+					"5508-9114-1212-3868",
+					"c123-460d-efeb-ce7b"
+				],
+				"name": "pgLogin",
+				"orientation": "PORTRAIT",
+				"parent": null
+			},
+			"type": "Page",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-statusBar",
+			"id": "37d4-4b74-0bb2-512e",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "statusBar",
+				"parent": "2dca-0923-99c9-d1b8"
+			},
+			"type": "StatusBar",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-headerBar",
+			"id": "5508-9114-1212-3868",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "headerBar",
+				"parent": "2dca-0923-99c9-d1b8",
+				"title": "pgLogin"
+			},
+			"type": "HeaderBar",
+			"userProps": {
+				"title": "pgLogin"
+			}
+		},
+		{
+			"className": ".sf-flexLayout .sf-flexLayout-login",
+			"id": "c123-460d-efeb-ce7b",
+			"props": {
+				"children": [
+					"a6eb-694c-6493-d374",
+					"eda6-bbb4-763e-5b5b",
+					"8e52-e65c-4331-a3ae"
+				],
+				"name": "flLogin",
+				"parent": "2dca-0923-99c9-d1b8"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".flexLayout .materialTextBox-wrapper .materialTextBox-custom",
+			"hiddenComponent": false,
+			"id": "a6eb-694c-6493-d374",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtbUsername",
+				"parent": "c123-460d-efeb-ce7b",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "materialTextBox",
+				"id": "574a-10da-b765-48e5"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"testId": "XXPTdgKfA",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".flexLayout .materialTextBox-wrapper .materialTextBox-custom",
+			"hiddenComponent": false,
+			"id": "eda6-bbb4-763e-5b5b",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtbPassword",
+				"parent": "c123-460d-efeb-ce7b",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "materialTextBox",
+				"id": "574a-10da-b765-48e5"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"testId": "MW3uJRzuT",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-button .sf-button-login",
+			"id": "8e52-e65c-4331-a3ae",
+			"props": {
+				"children": [],
+				"name": "btnLogin",
+				"parent": "c123-460d-efeb-ce7b",
+				"text": "button1",
+				"usePageVariable": true
+			},
+			"type": "Button",
+			"userProps": {
+				"testId": "ufPDBASDG",
+				"text": "button1",
+				"usePageVariable": true
+			}
+		}
+	]
+}

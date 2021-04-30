@@ -18,4 +18,4 @@ Application.onUnhandledError = function (e: UnhandledError) {
     });
 };
 
-router.push("/pages/pgPeopleList");
+router.push("/auth/login");

@@ -57,5 +57,8 @@ SMF.i18n.defineLanguage('en', {
     "starWarsCharacters": "Star Wars Characters",
     "openLink": "Open Link",
     "detail": "Detail",
-    "someAction": "Some Action"
+    "someAction": "Some Action",
+    "login": "Login",
+    "username": "Username",
+    "password": "Password"
 });

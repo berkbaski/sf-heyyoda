@@ -5,7 +5,8 @@ import { clearCache } from "sf-extension-utils/lib/getCombinedStyle";
 import { createThemeContextBound } from "@smartface/contx/lib/styling/ThemeContext";
 
 const themeConfig = config.theme;
-const currentTheme = Data.getStringVariable("currentTheme") || themeConfig.currentTheme;
+Data.getStringVariable("currentTheme") || Data.setStringVariable("currentTheme", themeConfig.currentTheme);
+const currentTheme = Data.getStringVariable("currentTheme");
 const themeSources = themeConfig.themes
     .map(name => ({
         name,
@@ -16,7 +17,7 @@ Application["theme"] = createThemeContextBound(themeSources);
 type ThemeListener = (themeName: string) => void;
 
 const themeListeners = new WeakMap<{}, ThemeListener>();
-const themeListenerKeys:{}[] = [];
+const themeListenerKeys: {}[] = [];
 export const ThemeService = {
     onChange(listener: ThemeListener) {
         const key = {};
@@ -25,7 +26,7 @@ export const ThemeService = {
         const deletionIndex = themeListenerKeys.length - 1;
 
         return () => {
-            if(themeListeners.has(key)){
+            if (themeListeners.has(key)) {
                 themeListeners.delete(key);
                 themeListenerKeys.splice(deletionIndex, 1);
             }
@@ -38,7 +39,7 @@ export const ThemeService = {
         });
         clearCache();
         themeListenerKeys.forEach((key) => {
-            if(themeListeners.has(key)){
+            if (themeListeners.has(key)) {
                 themeListeners.get(key)(name);
             }
         })

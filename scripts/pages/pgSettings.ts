@@ -18,15 +18,11 @@ export default class PgSettings extends PgSettingsDesign {
         // Overrides super.onLoad method
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
 
-        this.currentTheme = Data.getStringVariable('currentTheme');
-        this.swTheme.toggle = this.currentTheme == 'darkTheme';
-
-        this.swTheme.onToggleChanged = () => {
-            this.currentTheme = this.currentTheme == 'darkTheme' ? 'baseTheme' : 'darkTheme';
-            ThemeService.changeTheme(this.currentTheme);
-            Data.setStringVariable('currentTheme', this.currentTheme);
-        };
         this.initChangeButton();
+
+        this.btnLogout.onPress = () => {
+            Application.restart();
+        };
     }
     initHeader() {
         this.headerBar.title = global.lang.settings;
@@ -35,6 +31,16 @@ export default class PgSettings extends PgSettingsDesign {
         this.lblLanguage.text = `${global.lang.language} - ${SMF.i18n.currentLang.toUpperCase()}`;
         this.lblTheme.text = global.lang.darkTheme;
         this.lblChange.text = global.lang.change;
+    }
+    initTheme() {
+        this.currentTheme = Data.getStringVariable('currentTheme');
+        this.swTheme.toggle = this.currentTheme === 'darkTheme';
+
+        this.swTheme.onToggleChanged = () => {
+            this.currentTheme = this.currentTheme == 'darkTheme' ? 'baseTheme' : 'darkTheme';
+            ThemeService.changeTheme(this.currentTheme);
+            Data.setStringVariable('currentTheme', this.currentTheme);
+        };
     }
     initChangeButton() {
         this.lblChange.onTouchEnded = () => {
@@ -78,6 +84,7 @@ export default class PgSettings extends PgSettingsDesign {
 function onShow(superOnShow: () => void) {
     superOnShow();
     this.initHeader();
+    this.initTheme();
 }
 
 /**

@@ -26,53 +26,71 @@ const androidModalDismiss = (router, route) => {
     }
 };
 
-const router = Router.of({
-    path: "/",
-    to: '/pages',
-    isRoot: true,
+const authStack = StackRouter.of({
+    path: "/auth",
+    to: "/pages/login",
     routes: [
+        Route.of({
+            path: "/auth/login",
+            build: buildExtender({
+                getPageClass: () => require("pages/pgLogin").default,
+                headerBarStyle: { visible: true }
+            }),
+            routeDidEnter: androidModalDismiss
+        }),
+    ]
+});
+
+const mainStack = StackRouter.of({
+    path: "/pages",
+    to: "/pages/pgPeopleList",
+    routes: [
+        Route.of({
+            path: "/pages/pgPeopleList",
+            build: buildExtender({
+                getPageClass: () => require("pages/pgPeopleList").default,
+                headerBarStyle: { visible: true }
+            }),
+            routeDidEnter: androidModalDismiss
+        }),
         StackRouter.of({
-            path: "/pages",
-            to: "/pages/pgPeopleList",
+            path: "/pages/pgSettings",
+            to: "/pages/pgSettings/main",
+            modal: true,
             routes: [
                 Route.of({
-                    path: "/pages/pgPeopleList",
+                    path: "/pages/pgSettings/main",
                     build: buildExtender({
-                        getPageClass: () => require("pages/pgPeopleList").default,
-                        headerBarStyle: { visible: true }
-                    }),
-                    routeDidEnter: androidModalDismiss
-                }),
-                StackRouter.of({
-                    path: "/pages/pgSettings",
-                    to: "/pages/pgSettings/main",
-                    modal: true,
-                    routes: [
-                        Route.of({
-                            path: "/pages/pgSettings/main",
-                            build: buildExtender({
-                                getPageClass: () => require("pages/pgSettings").default,
-                                headerBarStyle: { visible: true }
-                            })
-                        }),
-                    ]
-                }),
-                Route.of({
-                    path: "/pages/pgPeopleDetail",
-                    build: buildExtender({
-                        getPageClass: () => require("pages/pgPeopleDetail").default,
-                        headerBarStyle: { visible: true }
-                    })
-                }),
-                Route.of({
-                    path: "/pages/pgPeopleLinkDetail",
-                    build: buildExtender({
-                        getPageClass: () => require("pages/pgPeopleLinkDetail").default,
+                        getPageClass: () => require("pages/pgSettings").default,
                         headerBarStyle: { visible: true }
                     })
                 }),
             ]
-        })
+        }),
+        Route.of({
+            path: "/pages/pgPeopleDetail",
+            build: buildExtender({
+                getPageClass: () => require("pages/pgPeopleDetail").default,
+                headerBarStyle: { visible: true }
+            })
+        }),
+        Route.of({
+            path: "/pages/pgPeopleLinkDetail",
+            build: buildExtender({
+                getPageClass: () => require("pages/pgPeopleLinkDetail").default,
+                headerBarStyle: { visible: true }
+            })
+        }),
+    ]
+});
+
+const router = Router.of({
+    path: "/",
+    to: '/auth',
+    isRoot: true,
+    routes: [
+        authStack,
+        mainStack
     ]
 });
 

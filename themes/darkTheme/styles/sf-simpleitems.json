@@ -1,163 +1,175 @@
 {
-    ".sf": {
-        "masksToBounds": true,
-        "&-gridViewItem": {
-            "&-simple": {
-                "flexProps": {
-                    "justifyContent": "FLEX_START",
-                    "alignItems": "STRETCH"
-                },
-                "height": 227,
-                "width": 165,
-                "&-preview": {
-                    "height": 165,
-                    "flexProps": {
-                        "alignSelf": "CENTER"
-                    },
-                    "image": "imageview_preview.png",
-                    "imageFillType": "ASPECTFIT",
-                    "marginBottom": null,
-                    "marginTop": null,
-                    "marginLeft": 15,
-                    "marginRight": 15,
-                    "width": null
-                },
-                "&-title": {
-                    "flexProps": {
-                        "positionType": "RELATIVE",
-                        "alignSelf": "AUTO"
-                    },
-                    "font": {
-                        "size": 15,
-                        "bold": true,
-                        "italic": false,
-                        "family": "SFProText",
-                        "style": "Semibold"
-                    },
-                    "height": 20,
-                    "marginBottom": null,
-                    "marginTop": 13,
-                    "textAlignment": "MIDCENTER",
-                    "textColor": "rgba( 0, 0, 0, 1 )"
-                },
-                "&-subtitle": {
-                    "flexProps": {
-                        "positionType": "RELATIVE",
-                        "alignSelf": "AUTO"
-                    },
-                    "font": {
-                        "size": 13,
-                        "bold": false,
-                        "italic": false,
-                        "family": "SFProText",
-                        "style": "Regular"
-                    },
-                    "height": 18,
-                    "marginBottom": 12,
-                    "marginTop": null,
-                    "textAlignment": "MIDCENTER",
-                    "textColor": "rgba( 0, 0, 0, 1 )"
-                }
-            }
-        },
-        "&-listViewItem": {
-            "&-simple": {
-                "flexProps": {
-                    "flexDirection": "ROW",
-                    "alignItems": "CENTER"
-                },
-                "&-title": {
-                    "flexProps": {
-                        "flexGrow": 3,
-                        "alignSelf": "AUTO"
-                    },
-                    "font": {
-                        "size": 16,
-                        "bold": false,
-                        "italic": false,
-                        "family": "SFProText",
-                        "style": "Regular"
-                    },
-                    "marginBottom": null,
-                    "marginLeft": 16,
-                    "marginTop": null,
-                    "textColor": "rgba( 0, 0, 0, 1 )",
-                    "width": null
-                },
-                "&-chevron": {
-                    "marginBottom": null,
-                    "marginRight": 16,
-                    "marginTop": null,
-                    "textAlignment": "MIDRIGHT",
-                    "textColor": "rgba( 255, 255, 255, 1 )",
-                    "width": null,
-                    "flexProps": {
-                        "flexGrow": 1
-                    },
-                    "font": {
-                        "size": 13,
-                        "bold": false,
-                        "italic": false,
-                        "family": "FontAwesome5FreeSolid",
-                        "style": null
-                    }
-                },
-                "&-line": {
-                    "backgroundColor": "rgba( 210, 210, 210, 1 )",
-                    "bottom": 0,
-                    "flexProps": {
-                        "positionType": "ABSOLUTE"
-                    },
-                    "height": 1,
-                    "left": 16,
-                    "marginBottom": null,
-                    "marginTop": null,
-                    "right": 0
-                },
-                "paddingLeft": 15,
-                "paddingRight": 15
-            },
-            "&-active": {
-                "backgroundColor": "rgba( 10, 10, 10, 1 )"
-            },
-            "&-inactive": {
-                "backgroundColor": "rgba( 18, 18, 18, 1 )"
-            },
-            "paddingLeft": 0,
-            "paddingRight": 0
-        },
-        "&-listView": {
-            "backgroundColor": "rgba( 255, 255, 255, 0 )"
-        },
-        "&-statusBar": {
-            "style": "LIGHTCONTENT",
-            "android": {
-                "color": "rgba( 18, 18, 18, 1 )"
-            }
-        },
-        "&-textView": {
-            "&-change": {
-                "testId": "3kwEqgHe9",
-                "height": 50,
-                "flexProps": {
-                    "flexGrow": 1
-                },
-                "textColor": "rgba( 0, 0, 0, 1 )",
-                "ellipsizeMode": "MIDDLE",
-                "textAlignment": "MIDRIGHT"
-            }
-        },
-        "&-label": {
-            "&-change": {
-                "textColor": "rgba( 255, 255, 255, 1 )"
-            }
-        },
-        "&-searchView": {
-            "&-custom": {
-                "textFieldBackgroundColor": "rgba( 33, 33, 33, 1 )",
-                "textColor": "rgba(255, 255, 255, 1)"
-            },
-            "backgroundColor": "rgba( 255, 255, 255, 0 )"
-        }
-    }
+	".sf": {
+		"masksToBounds": true,
+		"&-gridViewItem": {
+			"&-simple": {
+				"flexProps": {
+					"justifyContent": "FLEX_START",
+					"alignItems": "STRETCH"
+				},
+				"height": 227,
+				"width": 165,
+				"&-preview": {
+					"height": 165,
+					"flexProps": {
+						"alignSelf": "CENTER"
+					},
+					"image": "imageview_preview.png",
+					"imageFillType": "ASPECTFIT",
+					"marginBottom": null,
+					"marginTop": null,
+					"marginLeft": 15,
+					"marginRight": 15,
+					"width": null
+				},
+				"&-title": {
+					"flexProps": {
+						"positionType": "RELATIVE",
+						"alignSelf": "AUTO"
+					},
+					"font": {
+						"size": 15,
+						"bold": true,
+						"italic": false,
+						"family": "SFProText",
+						"style": "Semibold"
+					},
+					"height": 20,
+					"marginBottom": null,
+					"marginTop": 13,
+					"textAlignment": "MIDCENTER",
+					"textColor": "rgba( 0, 0, 0, 1 )"
+				},
+				"&-subtitle": {
+					"flexProps": {
+						"positionType": "RELATIVE",
+						"alignSelf": "AUTO"
+					},
+					"font": {
+						"size": 13,
+						"bold": false,
+						"italic": false,
+						"family": "SFProText",
+						"style": "Regular"
+					},
+					"height": 18,
+					"marginBottom": 12,
+					"marginTop": null,
+					"textAlignment": "MIDCENTER",
+					"textColor": "rgba( 0, 0, 0, 1 )"
+				}
+			}
+		},
+		"&-listViewItem": {
+			"&-simple": {
+				"flexProps": {
+					"flexDirection": "ROW",
+					"alignItems": "CENTER"
+				},
+				"&-title": {
+					"flexProps": {
+						"flexGrow": 3,
+						"alignSelf": "AUTO"
+					},
+					"font": {
+						"size": 16,
+						"bold": false,
+						"italic": false,
+						"family": "SFProText",
+						"style": "Regular"
+					},
+					"marginBottom": null,
+					"marginLeft": 16,
+					"marginTop": null,
+					"textColor": "rgba( 0, 0, 0, 1 )",
+					"width": null
+				},
+				"&-chevron": {
+					"marginBottom": null,
+					"marginRight": 16,
+					"marginTop": null,
+					"textAlignment": "MIDRIGHT",
+					"textColor": "rgba( 255, 255, 255, 1 )",
+					"width": null,
+					"flexProps": {
+						"flexGrow": 1
+					},
+					"font": {
+						"size": 13,
+						"bold": false,
+						"italic": false,
+						"family": "FontAwesome5FreeSolid",
+						"style": null
+					}
+				},
+				"&-line": {
+					"backgroundColor": "rgba( 210, 210, 210, 1 )",
+					"bottom": 0,
+					"flexProps": {
+						"positionType": "ABSOLUTE"
+					},
+					"height": 1,
+					"left": 16,
+					"marginBottom": null,
+					"marginTop": null,
+					"right": 0
+				},
+				"paddingLeft": 15,
+				"paddingRight": 15
+			},
+			"&-active": {
+				"backgroundColor": "rgba( 10, 10, 10, 1 )"
+			},
+			"&-inactive": {
+				"backgroundColor": "rgba( 18, 18, 18, 1 )"
+			},
+			"paddingLeft": 0,
+			"paddingRight": 0
+		},
+		"&-listView": {
+			"backgroundColor": "rgba( 255, 255, 255, 0 )"
+		},
+		"&-statusBar": {
+			"style": "LIGHTCONTENT",
+			"android": {
+				"color": "rgba( 18, 18, 18, 1 )"
+			}
+		},
+		"&-textView": {
+			"&-change": {
+				"testId": "3kwEqgHe9",
+				"height": 50,
+				"flexProps": {
+					"flexGrow": 1
+				},
+				"textColor": "rgba( 0, 0, 0, 1 )",
+				"ellipsizeMode": "MIDDLE",
+				"textAlignment": "MIDRIGHT"
+			}
+		},
+		"&-label": {
+			"&-change": {
+				"textColor": "rgba( 255, 255, 255, 1 )"
+			}
+		},
+		"&-searchView": {
+			"&-custom": {
+				"textFieldBackgroundColor": "rgba( 33, 33, 33, 1 )",
+				"textColor": "rgba(255, 255, 255, 1)"
+			},
+			"backgroundColor": "rgba( 255, 255, 255, 0 )"
+		},
+		"&-button": {
+			"backgroundColor": {
+				"normal": "rgba( 18, 18, 18, 1 )"
+			}
+		},
+		"&-flexLayout": {
+			"&-login": {
+				"flexProps": {
+					"flexGrow": 1
+				}
+			}
+		}
+	}
 }
