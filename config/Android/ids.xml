@@ -13,11 +13,6 @@
     <item name="___library___LviPerson_FlPersonWrapper_LblName" type="id" />
     <item name="___library___LviPerson_FlPersonWrapper_LblChevron" type="id" />
     <item name="___library___LviPerson_FlPersonWrapper_FlLine" type="id" />
-    <item name="_PgLogin_FlLogin" type="id" />
-    <item name="_PgLogin_FlLogin_LblUsername" type="id" />
-    <item name="_PgLogin_FlLogin_LblPassword" type="id" />
-    <item name="_PgLogin_FlLogin_BtnLogin" type="id" />
-    <item name="_PgLogin_FlLogin_MaterialTextBox" type="id" />
     <item name="_PgPeopleDetail_IvPeople" type="id" />
     <item name="_PgPeopleDetail_LvProperties" type="id" />
     <item name="_PgPeopleDetail_LvProperties_LviProperty" type="id" />
@@ -26,6 +21,10 @@
     <item name="_PgPeopleList_SwPerson" type="id" />
     <item name="_PgPeopleList_LvPerson" type="id" />
     <item name="_PgPeopleList_LvPerson_LviPerson" type="id" />
+    <item name="_PgLogin_FlLogin" type="id" />
+    <item name="_PgLogin_FlLogin_MtbUsername" type="id" />
+    <item name="_PgLogin_FlLogin_MtbPassword" type="id" />
+    <item name="_PgLogin_FlLogin_BtnLogin" type="id" />
     <item name="_PgSettings_FlSettings" type="id" />
     <item name="_PgSettings_FlSettings_FlLanguage" type="id" />
     <item name="_PgSettings_FlSettings_FlTheme" type="id" />
@@ -35,7 +34,4 @@
     <item name="_PgSettings_FlSettings_FlLogout_BtnLogout" type="id" />
     <item name="_PgSettings_FlSettings_FlTheme_SwTheme" type="id" />
     <item name="_PgSettings_FlSettings_FlLanguage_LblChange" type="id" />
-    <item name="_PgLogin_FlLogin_MtbUsername" type="id" />
-    <item name="_PgLogin_FlLogin_MtbUsername_1" type="id" />
-    <item name="_PgLogin_FlLogin_MtbPassword" type="id" />
 </resources>

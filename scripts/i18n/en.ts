@@ -60,5 +60,6 @@ SMF.i18n.defineLanguage('en', {
     "someAction": "Some Action",
     "login": "Login",
     "username": "Username",
-    "password": "Password"
+    "password": "Password",
+    "minCharError": "You must enter at least 6 characters"
 });

@@ -1,11 +1,10 @@
 import PgLoginDesign from 'generated/pages/pgLogin';
-import Color from "sf-core/ui/color";
 import KeyboardType from 'sf-core/ui/keyboardtype';
+import VMasker from 'vanilla-masker';
 
 export default class PgLogin extends PgLoginDesign {
     router: any;
-    username = '';
-    password = '';
+    formValid = false;
     constructor() {
         super();
         // Overrides super.onShow method
@@ -13,7 +12,18 @@ export default class PgLogin extends PgLoginDesign {
         // Overrides super.onLoad method
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
         this.btnLogin.onPress = () => {
-            this.router.push("/pages/pgPeopleList");
+            if (this.mtbUsername.materialTextBox.text.length < 6) {
+                this.mtbUsername.materialTextBox.errorMessage = global.lang.minCharError;
+                this.formValid = false;
+            }
+            if (this.mtbPassword.materialTextBox.text.length < 6) {
+                this.mtbPassword.materialTextBox.errorMessage = global.lang.minCharError;
+                this.formValid = false;
+            }
+
+            if (this.formValid) {
+                this.router.push("/pages/pgPeopleList");
+            }
         };
     }
     initText() {
@@ -22,12 +32,29 @@ export default class PgLogin extends PgLoginDesign {
     }
     initMaterialTextBox() {
         this.mtbUsername.options = {
-            hint: global.lang.username
+            hint: global.lang.username,
+            onTextChanged: () => {
+                const maskedText = VMasker.toPattern(this.mtbUsername.materialTextBox.text, "AAAAAAAAAA");
+                this.mtbUsername.materialTextBox.text = maskedText;
+
+                const errorMessage = this.mtbUsername.materialTextBox.errorMessage;
+                this.mtbUsername.materialTextBox.errorMessage = maskedText.length >= 6 ? "" : errorMessage;
+                this.formValid = maskedText.length >= 6;
+            }
         };
         this.mtbUsername.materialTextBox.keyboardType = KeyboardType.DEFAULT;
+
         this.mtbPassword.options = {
             hint: global.lang.password,
-            isPassword: true
+            isPassword: true,
+            onTextChanged: () => {
+                const maskedText = VMasker.toPattern(this.mtbPassword.materialTextBox.text, "9999999999");
+                this.mtbPassword.materialTextBox.text = maskedText;
+
+                const errorMessage = this.mtbPassword.materialTextBox.errorMessage;
+                this.mtbPassword.materialTextBox.errorMessage = maskedText.length >= 6 ? "" : errorMessage;
+                this.formValid = maskedText.length >= 6;
+            }
         };
         this.mtbPassword.materialTextBox.keyboardType = KeyboardType.NUMBER;
     }

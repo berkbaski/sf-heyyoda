@@ -58,5 +58,6 @@ SMF.i18n.defineLanguage('tr', {
     "someAction": "Bir Hareket",
     "login": "Giriş Yap",
     "username": "Kullanıcı Adı",
-    "password": "Parola"
+    "password": "Parola",
+    "minCharError": "En az 6 karakter girmelisiniz"
 });

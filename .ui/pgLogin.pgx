@@ -99,6 +99,7 @@
 			},
 			"type": "FlexLayout",
 			"userProps": {
+				"marginBottom": 16,
 				"testId": "MW3uJRzuT",
 				"usePageVariable": true
 			}
