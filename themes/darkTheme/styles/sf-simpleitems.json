@@ -145,11 +145,32 @@
 				"textColor": "rgba( 0, 0, 0, 1 )",
 				"ellipsizeMode": "MIDDLE",
 				"textAlignment": "MIDRIGHT"
-			}
+			},
+			"backgroundColor": "rgba( 255, 255, 255, 0 )"
 		},
 		"&-label": {
 			"&-change": {
 				"textColor": "rgba( 255, 255, 255, 1 )"
+			},
+			"backgroundColor": "rgba( 255, 255, 255, 0 )"
+		},
+		"&-searchView": {
+			"&-custom": {
+				"textFieldBackgroundColor": "rgba( 33, 33, 33, 1 )",
+				"textColor": "rgba(255, 255, 255, 1)"
+			},
+			"backgroundColor": "rgba( 255, 255, 255, 0 )"
+		},
+		"&-button": {
+			"backgroundColor": {
+				"normal": "rgba( 18, 18, 18, 1 )"
+			}
+		},
+		"&-flexLayout": {
+			"&-login": {
+				"flexProps": {
+					"flexGrow": 1
+				}
 			}
 		}
 	}

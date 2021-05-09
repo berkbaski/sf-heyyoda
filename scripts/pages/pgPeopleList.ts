@@ -2,20 +2,25 @@ import PgPeopleListDesign from 'generated/pages/pgPeopleList';
 
 import pushClassNames from "@smartface/contx/lib/styling/action/pushClassNames";
 import removeClassName from "@smartface/contx/lib/styling/action/removeClassName";
-
-import ListView from 'sf-core/ui/listview';
-import LviPerson from 'components/LviPerson';
-import HeaderBarItem from 'sf-core/ui/headerbaritem';
-import * as peopleService from 'services/people';
-import store from 'duck/store';
-
+import Image from "sf-core/ui/image";
 import Color from "sf-core/ui/color";
+import ListView from 'sf-core/ui/listview';
+import HeaderBarItem from 'sf-core/ui/headerbaritem';
+
+import LviPerson from 'components/LviPerson';
+import * as peopleService from 'services/people';
+
+import store from 'duck/store';
+import PeopleActions from 'duck/people/actions';
+
 
 export default class PgPeopleList extends PgPeopleListDesign {
     unsubsribe: ReturnType<typeof store.subscribe> = () => { };
     router: any;
     page = 0;
     servicePage = 0;
+    disableLazyLoading = false;
+
     constructor() {
         super();
         // Overrides super.onShow method
@@ -38,18 +43,21 @@ export default class PgPeopleList extends PgPeopleListDesign {
     initListView() {
         this.lvPerson.rowHeight = LviPerson.getHeight();
         this.lvPerson.onRowBind = (listViewItem: LviPerson, index: number) => {
-            listViewItem.name = store.getState().people.peopleList[index].name;
+            listViewItem.name = store.getState().people.filteredPeopleList[index].name;
             listViewItem.image = "images://darthvader.png";
 
             listViewItem.flPersonWrapper.dispatch(
                 pushClassNames(index % 2 === 1 ? '.sf-listViewItem-active' : '.sf-listViewItem-inactive')
             );
 
-            if (index + 1 < store.getState().people.peopleList.length) {
+            if (index + 1 < store.getState().people.filteredPeopleList.length) {
                 return; // Don't call service when scroll isn't at the bottom
             }
             if (this.page !== this.servicePage) {
                 return; // Prevent concurrent calls
+            }
+            if (this.disableLazyLoading) {
+                return; // Maybe someone is doing something (like searching...)
             }
 
             this.fetchPeople();
@@ -98,7 +106,7 @@ export default class PgPeopleList extends PgPeopleListDesign {
         item.android.paddingRight = 15;
     }
     refreshListView() {
-        this.lvPerson.itemCount = store.getState().people.peopleList.length;
+        this.lvPerson.itemCount = store.getState().people.filteredPeopleList.length;
         this.lvPerson.refreshData();
     }
     initHeader() {
@@ -110,6 +118,20 @@ export default class PgPeopleList extends PgPeopleListDesign {
             }
         });
         this.headerBar.setItems([rightItem]);
+
+        this.swPerson.addToHeaderBar(this);
+        this.swPerson.onSearchBegin = () => {
+            this.disableLazyLoading = true;
+        }
+        this.swPerson.onTextChanged = (searchText: string) => {
+            const newFilteredPeopleList = store.getState().people.peopleList
+                .filter(x => x.name.toLowerCase().indexOf(searchText.toLowerCase()) > -1);
+            store.dispatch(PeopleActions.setFilteredPeopleList(newFilteredPeopleList));
+            this.initListView();
+        }
+        this.swPerson.onSearchEnd = () => {
+            this.disableLazyLoading = false;
+        }
     }
 }
 

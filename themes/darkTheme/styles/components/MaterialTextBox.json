@@ -1,0 +1,14 @@
+{
+    ".materialTextBox": {
+        "&-custom": {
+            "testId": "-BAkIDf9b",
+            "flexProps": {
+                "positionType": "RELATIVE"
+            },
+            "flex": {
+                "positionType": 0
+            },
+            "textColor": "rgba(255, 255, 255, 1)"
+        }
+    }
+}

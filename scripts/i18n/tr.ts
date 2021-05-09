@@ -55,5 +55,9 @@ SMF.i18n.defineLanguage('tr', {
     "starWarsCharacters": "Yıldız Savaşları Karakterleri",
     "openLink": "Linki Aç",
     "detail": "Detay",
-    "someAction": "Bir Hareket"
+    "someAction": "Bir Hareket",
+    "login": "Giriş Yap",
+    "username": "Kullanıcı Adı",
+    "password": "Parola",
+    "minCharError": "En az 6 karakter girmelisiniz"
 });

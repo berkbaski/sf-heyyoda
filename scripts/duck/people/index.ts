@@ -1,11 +1,16 @@
 export namespace Constants {
     export const SET_PEOPLE_LIST = 'SET_PEOPLE_LIST';
+    export const SET_FILTERED_PEOPLE_LIST = 'SET_FILTERED_PEOPLE_LIST';
 }
 
 export namespace Actions {
     export interface SetPeopleList {
         type: typeof Constants.SET_PEOPLE_LIST;
         peopleList: SubState.People[];
+    }
+    export interface SetFilteredPeopleList {
+        type: typeof Constants.SET_FILTERED_PEOPLE_LIST;
+        filteredPeopleList: SubState.People[];
     }
 }
 
@@ -32,7 +37,8 @@ export namespace SubState {
 
 export interface State {
     peopleList: SubState.People[];
+    filteredPeopleList: SubState.People[];
 }
 
 //TODO: Find a better implementation to avoid duplicate typing
-export type ActionTypes = Actions.SetPeopleList;
+export type ActionTypes = Actions.SetPeopleList | Actions.SetFilteredPeopleList;

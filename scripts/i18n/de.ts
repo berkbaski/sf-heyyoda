@@ -27,4 +27,8 @@ SMF.i18n.defineLanguage('de', {
     "openLink": "Verbindung öffnen",
     "detail": "Detail",
     "someAction": "Etwas Aktion",
+    "login": "Login",
+    "username": "Nutzername",
+    "password": "Passwort",
+    "minCharError": "Sie müssen mindestens 6 Zeichen eingeben"
 });

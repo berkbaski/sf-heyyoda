@@ -1,29 +1,36 @@
 {
-	".sf": {
-		"&-textView": {
-			"&-change": {
-				"textColor": "rgba( 255, 255, 255, 1 )",
-				"flexProps": {
-					"flexGrow": 1
-				},
-				"height": 50,
-				"width": null
-			}
-		},
-		"&-label": {
-			"&-change": {
-				"textColor": "rgba( 0, 0, 0, 1 )"
-			}
-		},
-		"&-listViewItem": {
-			"&-active": {
-				"backgroundColor": "rgba( 245, 245, 245, 1 )"
-			},
-			"paddingLeft": 15,
-			"paddingRight": 15,
-			"&-inactive": {
-				"backgroundColor": "rgba( 235, 235, 235, 1 )"
-			}
-		}
-	}
+    ".sf": {
+        "&-textView": {
+            "&-change": {
+                "textColor": "rgba( 255, 255, 255, 1 )",
+                "flexProps": {
+                    "flexGrow": 1
+                },
+                "height": 50,
+                "width": null
+            }
+        },
+        "&-label": {
+            "&-change": {
+                "textColor": "rgba( 0, 0, 0, 1 )"
+            }
+        },
+        "&-listViewItem": {
+            "&-active": {
+                "backgroundColor": "rgba( 245, 245, 245, 1 )"
+            },
+            "paddingLeft": 15,
+            "paddingRight": 15,
+            "&-inactive": {
+                "backgroundColor": "rgba( 235, 235, 235, 1 )"
+            }
+        },
+        "&-searchView": {
+            "&-custom": {
+                "textFieldBackgroundColor": "rgba(255,255,255,1)",
+                "textColor": "rgba(0, 0, 0, 1)"
+            },
+            "backgroundColor": "rgba( 255, 255, 255, 0 )"
+        }
+    }
 }

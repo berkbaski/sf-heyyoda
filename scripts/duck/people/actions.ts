@@ -7,4 +7,10 @@ export default class Actions {
             peopleList
         }
     }
+    static setFilteredPeopleList(filteredPeopleList: SubState.People[]): ActionTypes {
+        return {
+            type: Constants.SET_FILTERED_PEOPLE_LIST,
+            filteredPeopleList
+        }
+    }
 }

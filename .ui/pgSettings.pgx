@@ -51,7 +51,8 @@
 			"props": {
 				"children": [
 					"5ccc-f512-7eda-09a6",
-					"a043-d7ce-ff66-dd32"
+					"a043-d7ce-ff66-dd32",
+					"54c8-dc34-de24-c3d2"
 				],
 				"name": "flSettings",
 				"parent": "c76a-c1e1-be11-1ee5",
@@ -206,6 +207,39 @@
 				},
 				"testId": "floeoP7MC",
 				"toggle": true,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout",
+			"id": "54c8-dc34-de24-c3d2",
+			"props": {
+				"children": [
+					"e7c3-b913-a760-2de5"
+				],
+				"name": "flLogout",
+				"parent": "39ba-61f0-c276-5a56"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"height": 50,
+				"testId": "0I9BlGZ5c"
+			}
+		},
+		{
+			"className": ".sf-button",
+			"id": "e7c3-b913-a760-2de5",
+			"props": {
+				"children": [],
+				"name": "btnLogout",
+				"parent": "54c8-dc34-de24-c3d2",
+				"text": "button1",
+				"usePageVariable": true
+			},
+			"type": "Button",
+			"userProps": {
+				"testId": "KOo48EDG9",
+				"text": "button1",
 				"usePageVariable": true
 			}
 		}
